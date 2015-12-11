@@ -1,5 +1,5 @@
 <?php
-	$pagetitle = 'Violencia Froooooooooooonteraaaaaaaaaaaa';
+	$pagetitle = 'Violencia Frontera';
 	require_once("inc/config.php");
 ?> 
 
