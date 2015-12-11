@@ -1,0 +1,49 @@
+<?php
+	$pagetitle = 'Insertar';
+	require_once("inc/config.php");
+?> 
+
+<?php include(ROOT_PATH . 'inc/header.php'); ?>
+ 
+<main>
+    <h1>Insertar nuevo evento</h1>
+	 <form method="post" action="inserta.php">
+	 	 <label>Titulo</label><br>
+	 	 	<input type="text" name="titulo"><br>
+		 <label for="name" name="grupop">Grupo perpetrador:</label><br>
+	 		<select name="nomperp">
+			  <option value="value1">Us Police</option> 
+			  <option value="value2">Border Patrol</option> 
+			  <option value="value3">Narco</option> 
+			  <option value="value4">Policía MX</option>
+			  <option value="value5" selected>Otros</option>
+			</select><br>
+	 	<label for="name">Nombre perpetrador:</label><br>
+	 		<input type="text" name="nomperp" value=""><br>
+	 	<label for="name">Tipo de violencia:</label><br>
+	 		<input type="text" name="categoria" value=""><br>
+	 	<label for="name">Fecha:</label><br>
+	 		<input type="text" name="fecha" value="(año-mes-día)"><br>
+	 	<label for="name">Número de víctimas:</label><br>
+	 		<input type="text" name="numvictimas" value=""><br>
+	 	<label for="name">País:</label><br>
+	 		<input type="text" name="pais" value=""><br>
+		 <label for="name">Estado:</label><br>
+	 		<input type="text" name="estado" value=""><br>
+	 	<label for="name">Municipio:</label><br>
+	 		<input type="text" name="municipio" value=""><br>
+	 	<label for="name">Latitud:</label><br>
+	 		<input type="text" name="long" value=""><br>
+	 	<label for="name">Longitud:</label><br>
+	 		<input type="text" name="lat" value=""><br>
+		<label for="message">Descripción:</label><br>
+	 		<textarea name="desc" value=""></textarea><br>
+	 	<label for="message">Texto Completo:</label><br>
+	 		<textarea name="texto" value=""></textarea><br>
+	 			
+	 	<input type="submit" value="Añadir evento">
+	 
+	 </form>
+</main>
+
+<?php include(ROOT_PATH . 'inc/footer.php'); ?>
