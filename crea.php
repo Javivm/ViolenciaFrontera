@@ -8,8 +8,6 @@
 
   $file = fopen("./../scripts/main.js", "w") or die("ERROR: CREATING FILE"); // NO ESTA CREANDO EL ARCHIVO POR ESO LO VOY A PROBAR EN UN ECHO
 
-  //en el fopen si esta solo ./scripts/main.js se tiene que cambiar a ./../scripts/main.js para que sea despues de insertar la parte de creacion
-
   //PARTE 1 CONSTANTE
   fwrite($file, '//Maps
 function initialize() {
