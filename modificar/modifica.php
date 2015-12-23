@@ -80,11 +80,16 @@
 
 			echo "<form method='post' action=''>
 					Titulo del evento que deseas modificar:<br><br>
-					<input type='text' name='id'><br><br>
+					<input type='text' name='id' required><br><br>
 					Campo que deseas alterar<br><br>
 					<select name='campo'>
 						<option value='Titulo'>Titulo</option>
 						<option value='NombrePerpetrador'>Nombre Perpetrador</option>
+						<option value='idGrupo'>Grupo</option>
+						<option value='idEstado'>Estado</option>
+						<option value='idMunicipio'>Municipio</option>
+						<option value='idPais'>Pa&iacute;s</option>
+						<option value='idTiposViolencia'>Tipo de Violencia</option>
 						<option value='NumVictimas'>NumVictimas</option>
 						<option value='Descripcion'>Descripcion</option>
 						<option value='Fecha'>Fecha</option>
@@ -93,7 +98,7 @@
 						<option value='lt'>Latitud</option>
 					</select><br><br>
 					Informacion Coregida<br><br>
-					<input type='text' name='new_info'><br><br>
+					<input type='text' name='new_info' required><br><br>
 					<input type='hidden' value='Evento' name='tabla'> 
 					<input type='hidden' value='Titulo' name='nombre'>
 					<input type='hidden' value='1' name='hidden'><br><br>
@@ -109,7 +114,42 @@
 		$ID = $_POST['id'];
 		$New_Info = $_POST['new_info'];
 		$Nombre = $_POST['nombre'];
+		if(strcmp($Tabla, 'Evento') == 0 && (strcmp($Campo, 'idGrupo') == 0 || strcmp($Campo, 'idPais') == 0 || strcmp($Campo, 'idEstado') == 0 || strcmp($Campo, 'idMunicipio') == 0 || strcmp($Campo, 'idTiposViolencia') == 0)){
+
+			if(strcmp($Campo, 'idGrupo') == 0){
+				$Tb = "Grupo";
+				$Val = "Nombre";
+			} else // if
+			if(strcmp($Campo, 'idPais') == 0){
+				$Tb = "Pais";
+				$Val = "Nombre";
+			} else // if
+			if(strcmp($Campo, 'idEstado') == 0){
+				$Tb = "Estado";
+				$Val = "Nombre";
+			} else // if
+			if(strcmp($Campo, 'idMunicipio') == 0){
+				$Tb = "Municipio";
+				$Val = "Nombre";
+			} else // if
+			if(strcmp($Campo, 'idTiposViolencia') == 0){
+				$Tb = "TiposViolencia";
+				$Val = "Categora";
+			}// if
+
+			$Query = "SELECT $Campo FROM $Tb WHERE $Val = '$New_Info';";
+			$search = mysql_query($Query);
+			//echo $Query;
+			if(mysql_num_rows($search) != 0){
+				$line = mysql_fetch_assoc($search);
+				$New_Info = $line[$Campo]; //NO SE PONE DENTRO DE LAS COMIILAS POR QUE NO SIRVE DE ESA FORMA.
+				//echo $New_Info;
+			}else{
+				echo '<script>alert("No se encontro ningun '.$Tb.' con '.$Val.' '.$New_Info.'");</script>';
+			}
+		} // IF
 		$q = "UPDATE $Tabla SET $Campo = '$New_Info' WHERE $Nombre = '$ID';";
+		//echo $q;
 		$res = mysql_query($q); //EJECUTAR QUERY
 		//----CHECAR QUE SE HAYA ALTERADO LA BASE DE DATOS---//
 		if(mysql_affected_rows($link) > 0){
