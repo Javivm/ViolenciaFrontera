@@ -75,10 +75,34 @@
 					<input type='hidden' value='1' name='hidden'><br><br>
 					<input type='submit' value='OK'>
 				  <form>";
+		}else
+		if (strcmp($_POST['Campo'], "Evento") == 0) {
+
+			echo "<form method='post' action=''>
+					Titulo del evento que deseas modificar:<br><br>
+					<input type='text' name='id'><br><br>
+					Campo que deseas alterar<br><br>
+					<select name='campo'>
+						<option value='Titulo'>Titulo</option>
+						<option value='NombrePerpetrador'>Nombre Perpetrador</option>
+						<option value='NumVictimas'>NumVictimas</option>
+						<option value='Descripcion'>Descripcion</option>
+						<option value='Fecha'>Fecha</option>
+						<option value='TextoCompleto'>Texto</option>
+						<option value='lg'>Longitud</option>
+						<option value='lt'>Latitud</option>
+					</select><br><br>
+					Informacion Coregida<br><br>
+					<input type='text' name='new_info'><br><br>
+					<input type='hidden' value='Evento' name='tabla'> 
+					<input type='hidden' value='Titulo' name='nombre'>
+					<input type='hidden' value='1' name='hidden'><br><br>
+					<input type='submit' value='OK'>
+				  <form>";
 		}
-		/*
-		LOS HIDDEN SON PARA IDENTIFICAR QUE TABLA SE DESEA ALTERAR, SU CAMPO PARA IDENTIFICAR EL ELEMENTO Y SU ID
-		*/
+		
+		//LOS HIDDEN SON PARA IDENTIFICAR QUE TABLA SE DESEA ALTERAR, SU CAMPO PARA IDENTIFICAR EL ELEMENTO Y SU ID
+		
 	}else{
 		$Tabla = $_POST['tabla'];
 		$Campo = $_POST['campo'];
