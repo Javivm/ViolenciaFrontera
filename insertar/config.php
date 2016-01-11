@@ -3,8 +3,8 @@
  * Server configuration
  */
 $cfgServer['host']	= 'localhost';	
-$cfgServer['user']	= 'Javi';	
-$cfgServer['password']	= '1ns1gnia';	 
+$cfgServer['user']	= 'root';	
+$cfgServer['password']	= '3l#p1ngu1no';	 
 $cfgServer['dbname']	= 'ViolenciaFrontera';	
 
 ?>
