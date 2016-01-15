@@ -1,11 +1,11 @@
 <?php
 	$pagetitle = 'Insertar';
-	require_once("inc/config.php");
+	require_once("../inc/config.php");
 ?> 
 
 <?php include(ROOT_PATH . 'inc/header.php'); ?>
  
-<main>
+<main class="formpage">
     <h1>Modificar:</h1>
 	<div id="BuscaMod1">
 		Buscador
@@ -22,7 +22,7 @@
 			<option>Tipo de Violencia</option>
 		</select><br><br>
 		<input type='hidden' value='0' name="hidden">
-		<input type="submit" value="OK">
+		<input type="submit" class="buttonsubmit" value="Guardar cambios">
 		</form>
 	</div>
 </main>

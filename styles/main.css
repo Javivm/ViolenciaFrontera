@@ -3,26 +3,40 @@ html, body{
 	height:100%;
 	margin:0px;
 	float: left;
+    overflow-x: hidden;
 	font-family: Roboto,Arial,sans-serif;
 }
 
 header{
-	width: 15%;
+    width: 15%;
+    min-width: 200px;
     float: left;
     height: 100%;
     box-sizing: border-box;
-    position: relative;
-    padding: 1%;
+    position: fixed;
+    padding: 1% 1% 1% 2%;
     border-right: 5px solid #46bcec;
     background-color: #f2f2f2;
 }
 
+h1{
+    margin-bottom: 3%;
+}
+
+h3{
+    font-size: .9em;
+    text-transform: uppercase;
+    color: rgba(1,1,1,0.6);
+    margin-top: 0;
+}
+
 main{
-    width: 85%;
+    width: 100%;
     box-sizing: border-box;
-    position: relative;
+    position: absolute;
     height: 100%;
     float: left;
+    margin-left: 200px;
 }
 
 #map{
@@ -32,8 +46,10 @@ main{
 }
 
 ul{
-	list-style: none;
-	padding: 0;
+    list-style: none;
+    padding: 0;
+    margin-top: 5%;
+    float: left;
 }
 
 #infobox{
@@ -66,4 +82,93 @@ ul{
 }
 .nonof::before{
 	background-color: #eab02f;
+}
+
+.formpage{
+    width:100%;
+    min-height:100%;
+    height:auto;
+    padding:2% 4%;
+    margin-left:0;
+    background-color: #f2f2f2;
+}
+
+form{
+    background-color: #46bcec;
+    border-radius: 5px;
+    padding: 2%;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.division{
+    width:33%;
+    padding-right: 2%;
+    box-sizing:border-box;
+    float:left;
+}
+
+.fullpanel{
+    width:100%;
+    float:left;
+    box-sizing:border-box;
+}
+
+input {
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+    font-size: 1em;
+    padding: 2%;
+    margin: 2% 0;
+    float:left;
+    box-sizing: border-box;
+    width:100%;
+}
+
+select{
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+    font-size: 1em;
+    padding: 2%;
+    margin: 2% 0;
+    float:left;
+    box-sizing: border-box;
+    width:100%;
+}
+
+/*input:nth-child(2n+0){
+clear:both;
+}*/
+
+label{
+    float:left;
+    box-sizing: border-box;
+    width:100%;
+}
+
+textarea{
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+    font-size: 1em;
+    padding: 2%;
+    margin: 2% 0; 
+    width:100%;
+    min-height: 100px; 
+    box-sizing: border-box; 
+}
+
+.clear{
+    clear:right;
+}
+
+.buttonsubmit{
+    transition: .2s ease all;
+}
+.buttonsubmit:hover{
+background-color: rgba(1,1,1,0.8);
+color:white;
 }
