@@ -1,11 +1,16 @@
 <?php
+<<<<<<< HEAD:modificar/index.html
 	$pagetitle = 'Modificar';
 	require_once("inc/config.php");
+=======
+	$pagetitle = 'Insertar';
+	require_once("../inc/config.php");
+>>>>>>> 8555d185babeb77e3dda61eefb6429bdd6398f05:editar/index.php
 ?> 
 
 <?php include(ROOT_PATH . 'inc/header.php'); ?>
  
-<main>
+<main class="formpage">
     <h1>Modificar:</h1>
 	<div id="BuscaMod1">
 		Buscador
@@ -22,7 +27,7 @@
 			<option>Tipo de Violencia</option>
 		</select><br><br>
 		<input type='hidden' value='0' name="hidden">
-		<input type="submit" value="OK">
+		<input type="submit" class="buttonsubmit" value="Guardar cambios">
 		</form>
 	</div>
 </main>
