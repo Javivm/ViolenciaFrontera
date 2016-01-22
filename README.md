@@ -1,9 +1,10 @@
 # Violencia Frontera
 
 ## Javier
+- Modificar/borrar
+- Ajax Buscador
+- Alterar archivo index.php  para que genere nueva idea (time bar and icons)
 
-- Busacadores en borrar y modificar
-- Corregir Borrar
 
 ## Rodrigo
 

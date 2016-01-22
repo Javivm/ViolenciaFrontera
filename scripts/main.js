@@ -134,166 +134,272 @@ function initialize() {
 
   //---------PARTE GENERADA--------//
     
-  var locacionEvento9 = new google.maps.LatLng(32.514947, -117.038247);
+  var locacionEvento14 = new google.maps.LatLng(32.514947, -117.038247);
 
-  var locacionEvento9Marker = new google.maps.Marker({
-      position: locacionEvento9,
+  var locacionEvento14Marker = new google.maps.Marker({
+      position: locacionEvento14,
       map: map,
-      title:"Evento9",
-      icon: narc
-  });
-
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Los Hochos</h1>'+
-      '<div id=bodyContent>'+
-      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-      'sandstone rock formation in the southern part of the '+
-      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-      'south west of the nearest large town, Alice Springs; 450&#160;km '+
-      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-      'Aboriginal people of the area. It has many springs, waterholes, '+
-      'rock caves and ancient paintings. Uluru is listed as a World '+
-      'Heritage Site.</p>'+
-      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-      '(last visited June 22, 2009).</p>'+
-      '</div>'+
-      '</div>';
-
-  var infoEvento9 = new google.maps.InfoWindow({
-    content: contentString
-  });
-
-
-  locacionEvento9Marker.addListener('click', function() {
-    infoEvento9.open(map, locacionEvento9Marker);
-  });
-
-
-  
-  var locacionEvento10 = new google.maps.LatLng(29.548969, -104.416809);
-
-  var locacionEvento10Marker = new google.maps.Marker({
-      position: locacionEvento10,
-      map: map,
-      title:"Evento10",
-      icon: mxpolice
-  });
-
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Muerte de Chinos</h1>'+
-      '<div id=bodyContent>'+
-      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-      'sandstone rock formation in the southern part of the '+
-      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-      'south west of the nearest large town, Alice Springs; 450&#160;km '+
-      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-      'Aboriginal people of the area. It has many springs, waterholes, '+
-      'rock caves and ancient paintings. Uluru is listed as a World '+
-      'Heritage Site.</p>'+
-      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-      '(last visited June 22, 2009).</p>'+
-      '</div>'+
-      '</div>';
-
-  var infoEvento10 = new google.maps.InfoWindow({
-    content: contentString
-  });
-
-
-  locacionEvento10Marker.addListener('click', function() {
-    infoEvento10.open(map, locacionEvento10Marker);
-  });
-
-
-  
-  var locacionEvento11 = new google.maps.LatLng(31.461761, -110.704422);
-
-  var locacionEvento11Marker = new google.maps.Marker({
-      position: locacionEvento11,
-      map: map,
-      title:"Evento11",
-      icon: other
-  });
-
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Caen los pollos</h1>'+
-      '<div id=bodyContent>'+
-      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-      'sandstone rock formation in the southern part of the '+
-      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-      'south west of the nearest large town, Alice Springs; 450&#160;km '+
-      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-      'Aboriginal people of the area. It has many springs, waterholes, '+
-      'rock caves and ancient paintings. Uluru is listed as a World '+
-      'Heritage Site.</p>'+
-      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-      '(last visited June 22, 2009).</p>'+
-      '</div>'+
-      '</div>';
-
-  var infoEvento11 = new google.maps.InfoWindow({
-    content: contentString
-  });
-
-
-  locacionEvento11Marker.addListener('click', function() {
-    infoEvento11.open(map, locacionEvento11Marker);
-  });
-
-
-  
-  var locacionEvento13 = new google.maps.LatLng(31.761878, -106.485022);
-
-  var locacionEvento13Marker = new google.maps.Marker({
-      position: locacionEvento13,
-      map: map,
-      title:"Evento13",
+      title:"Evento14",
       icon: uspolice
   });
 
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Los Hochos</h1>'+
+      '<h1 id="firstHeading" class="firstHeading">Hola</h1>'+
       '<div id=bodyContent>'+
-      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-      'sandstone rock formation in the southern part of the '+
-      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-      'south west of the nearest large town, Alice Springs; 450&#160;km '+
-      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-      'Aboriginal people of the area. It has many springs, waterholes, '+
-      'rock caves and ancient paintings. Uluru is listed as a World '+
-      'Heritage Site.</p>'+
-      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-      '(last visited June 22, 2009).</p>'+
+      '<div><b>Grupo: US Police</b></div><div><b>Cartel de Sonora</b></div><div><b>Lugar: Mexico, Baja California, Tijuana</b></div><div><b>2015-12-08</b></div>'+
+      '<p>Desaparecen Estudiantes<div><a href="./comptext.php?id=14">Noticia Completa</div>'+
       '</div>'+
       '</div>';
 
-  var infoEvento13 = new google.maps.InfoWindow({
+  var infoEvento14 = new google.maps.InfoWindow({
     content: contentString
   });
 
 
-  locacionEvento13Marker.addListener('click', function() {
-    infoEvento13.open(map, locacionEvento13Marker);
+  locacionEvento14Marker.addListener('click', function() {
+    infoEvento14.open(map, locacionEvento14Marker);
+  });
+
+
+  
+  var locacionEvento15 = new google.maps.LatLng(31.761878, -106.485022);
+
+  var locacionEvento15Marker = new google.maps.Marker({
+      position: locacionEvento15,
+      map: map,
+      title:"Evento15",
+      icon: uspolice
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Police</h1>'+
+      '<div id=bodyContent>'+
+      '<div><b>Grupo: US Police</b></div><div><b>Texas Patrol</b></div><div><b>Lugar: Estados Unidos, Texas, El Paso</b></div><div><b>2015-06-09</b></div>'+
+      '<p>Matan a personas<div><a href="./comptext.php?id=15">Noticia Completa</div>'+
+      '</div>'+
+      '</div>';
+
+  var infoEvento15 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+  locacionEvento15Marker.addListener('click', function() {
+    infoEvento15.open(map, locacionEvento15Marker);
+  });
+
+
+  
+  var locacionEvento16 = new google.maps.LatLng(29.297225, -110.330881);
+
+  var locacionEvento16Marker = new google.maps.Marker({
+      position: locacionEvento16,
+      map: map,
+      title:"Evento16",
+      icon: narc
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Arrazando</h1>'+
+      '<div id=bodyContent>'+
+      '<div><b>Grupo: Narco</b></div><div><b>Cartel Poop</b></div><div><b>Lugar: Mexico, Sonora, La Chingada</b></div><div><b>2015-12-10</b></div>'+
+      '<p>Mueren por causas de la naturaleza las personas<div><a href="./comptext.php?id=16">Noticia Completa</div>'+
+      '</div>'+
+      '</div>';
+
+  var infoEvento16 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+  locacionEvento16Marker.addListener('click', function() {
+    infoEvento16.open(map, locacionEvento16Marker);
+  });
+
+
+  
+  var locacionEvento17 = new google.maps.LatLng(28.632996, -106.069100);
+
+  var locacionEvento17Marker = new google.maps.Marker({
+      position: locacionEvento17,
+      map: map,
+      title:"Evento17",
+      icon: other
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Dioctria</h1>'+
+      '<div id=bodyContent>'+
+      '<div><b>Grupo: Otros</b></div><div><b>No Hay</b></div><div><b>Lugar: Mexico, Chihuahua, Insurgentes</b></div><div><b>2015-12-15</b></div>'+
+      '<p>Come Caca<div><a href="./comptext.php?id=17">Noticia Completa</div>'+
+      '</div>'+
+      '</div>';
+
+  var infoEvento17 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+  locacionEvento17Marker.addListener('click', function() {
+    infoEvento17.open(map, locacionEvento17Marker);
+  });
+
+
+  
+  var locacionEvento18 = new google.maps.LatLng(32.559546, -104.416809);
+
+  var locacionEvento18Marker = new google.maps.Marker({
+      position: locacionEvento18,
+      map: map,
+      title:"Evento18",
+      icon: other
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Prueba Color</h1>'+
+      '<div id=bodyContent>'+
+      '<div><b>Grupo: Policía MX</b></div><div><b></b></div><div><b>Lugar: Mexico, Baja California, Tijuana</b></div><div><b>2015-12-11</b></div>'+
+      '<p>alksssa<div><a href="./comptext.php?id=18">Noticia Completa</div>'+
+      '</div>'+
+      '</div>';
+
+  var infoEvento18 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+  locacionEvento18Marker.addListener('click', function() {
+    infoEvento18.open(map, locacionEvento18Marker);
+  });
+
+
+  
+  var locacionEvento19 = new google.maps.LatLng(34.048928, -111.093731);
+
+  var locacionEvento19Marker = new google.maps.Marker({
+      position: locacionEvento19,
+      map: map,
+      title:"Evento19",
+      icon: borderpatrol
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Work</h1>'+
+      '<div id=bodyContent>'+
+      '<div><b>Grupo: Border Patrol</b></div><div><b>asjkdna</b></div><div><b>Lugar: Estados Unidos, Arizona, Kajnskjn</b></div><div><b>2015-06-09</b></div>'+
+      '<p>asdknckjnasdñcnñldancjn<div><a href="./comptext.php?id=19">Noticia Completa</div>'+
+      '</div>'+
+      '</div>';
+
+  var infoEvento19 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+  locacionEvento19Marker.addListener('click', function() {
+    infoEvento19.open(map, locacionEvento19Marker);
+  });
+
+
+  
+  var locacionEvento20 = new google.maps.LatLng(34.594215, -106.027679);
+
+  var locacionEvento20Marker = new google.maps.Marker({
+      position: locacionEvento20,
+      map: map,
+      title:"Evento20",
+      icon: narc
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Come poop</h1>'+
+      '<div id=bodyContent>'+
+      '<div><b>Grupo: Narco</b></div><div><b>EL narquillo</b></div><div><b>Lugar: Estados Unidos, New Mexico, Willard</b></div><div><b>2016-02-04</b></div>'+
+      '<p>Esto seria el resumen de la noticia<div><a href="./comptext.php?id=20">Noticia Completa</div>'+
+      '</div>'+
+      '</div>';
+
+  var infoEvento20 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+  locacionEvento20Marker.addListener('click', function() {
+    infoEvento20.open(map, locacionEvento20Marker);
+  });
+
+
+  
+  var locacionEvento21 = new google.maps.LatLng(28.770067, -105.946655);
+
+  var locacionEvento21Marker = new google.maps.Marker({
+      position: locacionEvento21,
+      map: map,
+      title:"Evento21",
+      icon: other
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Prueba link</h1>'+
+      '<div id=bodyContent>'+
+      '<div><b>Grupo: Otros</b></div><div><b>Balto</b></div><div><b>Lugar: Mexico, Chihuahua, La Calera</b></div><div><b>2016-02-06</b></div>'+
+      '<p>Resumen<div><a href="./comptext.php?id=21">Noticia Completa</div>'+
+      '</div>'+
+      '</div>';
+
+  var infoEvento21 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+  locacionEvento21Marker.addListener('click', function() {
+    infoEvento21.open(map, locacionEvento21Marker);
+  });
+
+
+  
+  var locacionEvento22 = new google.maps.LatLng(32.221743, -110.926479);
+
+  var locacionEvento22Marker = new google.maps.Marker({
+      position: locacionEvento22,
+      map: map,
+      title:"Evento22",
+      icon: uspolice
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Prueba de CompText</h1>'+
+      '<div id=bodyContent>'+
+      '<div><b>Grupo: US Police</b></div><div><b>Arizona Patrol</b></div><div><b>Lugar: Estados Unidos, Arizona, Tucson</b></div><div><b>2016-03-12</b></div>'+
+      '<p>Resumen<div><a href="./comptext.php?id=22">Noticia Completa</div>'+
+      '</div>'+
+      '</div>';
+
+  var infoEvento22 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+  locacionEvento22Marker.addListener('click', function() {
+    infoEvento22.open(map, locacionEvento22Marker);
   });
 
 

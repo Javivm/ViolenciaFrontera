@@ -2,8 +2,8 @@
 
 /* EN ESTE MODULO USARE LOS ECHO PARA HACER LA PAGINA DINAMICA, ESTO LO HAGO YA QUE LA BIBLIOTECA HTML/..../ITX NO ESTA SIENDO INSTALADA CORRECTAMENTE.
 	lO QUE SALE EN LOS ECHO VA A SER EL HTML, PARA ALTERAR EL DISEÑO ALTERARLO AQUI */
-
-include "./../config.php";
+include(ROOT_PATH . 'inc/header.php');
+include "./../credentials.php";
 
 $link = mysql_pconnect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
 mysql_select_db($cfgServer['dbname']) or die("Could not select database"); //CONNECT TO DB
@@ -68,7 +68,7 @@ if(isset($_GET['Buscar'])){ //--EN CASO DE QUE YA HAYAN MANDADO INFO
 
 //-----FIN ASIGNACION NOMBRES REALES-----//
 
-	$q = "SELECT ev.idEvento, Titulo, ev.NombrePerpetrador, ev.NumVictimas, ev.Descripcion, ev.Fecha, ev.TextoCompleto, ev.lg, ev.lt, e.Nombre AS Estado, g.Nombre AS SubGrupo, g.Descripcion AS DescGrupo, g.Grupo AS Grupo, m.Nombre AS Municipio, p.Nombre AS Pais, t.Categora AS Categoria FROM Evento ev LEFT JOIN Estado e USING(idEstado) LEFT JOIN Grupo g USING(idGrupo) LEFT JOIN Municipio m USING(idMunicipio) LEFT JOIN Pais p USING(idPais) LEFT JOIN TiposViolencia t USING(idTiposViolencia) WHERE ".$campo." = '".$busca."';";
+	$q = "SELECT ev.idEvento, Titulo, ev.NombrePerpetrador, ev.NumVictimas, ev.Descripcion, ev.Fecha, ev.TextoCompleto, ev.lg, ev.lt, e.Nombre AS Estado, g.Nombre AS SubGrupo, g.Descripcion AS DescGrupo, g.Grupo AS Grupo, m.Nombre AS Municipio, p.Nombre AS Pais, t.Categora AS Categoria FROM Evento ev LEFT JOIN Estado e ON e.idEstado = ev.idEstado LEFT JOIN Grupo g ON g.idGrupo = ev.idGrupo LEFT JOIN Municipio m ON m.idMunicipio = ev.idMunicipio LEFT JOIN Pais p ON p.idPais = ev.idPais LEFT JOIN TiposViolencia t USING(idTiposViolencia) WHERE ".$campo." LIKE '".$busca."%';";
 	
 	//echo $campo;
 	//echo $q;
@@ -110,7 +110,7 @@ if(isset($_GET['Buscar'])){ //--EN CASO DE QUE YA HAYAN MANDADO INFO
 					$Categoria = $row['Categoria'];
 
 					echo'<tr>
-							<td><a href="a'.$id.'" target="_blank">'.$id.'</a></td>
+							<td><a href="./CompText.php?id='.$id.'" target="_blank">'.$id.'</a></td>
 							<td>'.$Titulo.'</td>
 							<td>'.$Desc.'</td>
 							<td>'.$Fecha.'</td>

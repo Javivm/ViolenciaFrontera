@@ -26,7 +26,11 @@
 </div>
 <div class="division">
 	 	<label for="name">Tipo de violencia:</label>
-	 		<input type="text" name="categoria" value="" required>
+	 		<select name="categoria" class="clear">
+			  <option >Desaparicion</option> 
+			  <option >Homicidio</option> 
+			  <option >Concecuencias de Migracion</option> 
+			</select>
 	 	<label for="name">Fecha de la Noticia:</label>
 	 		<input type="text" name="fecha" value="(a&ntilde;o-mes-d&iacute;a)" required class="clear">
 	 	<label for="name">N&uacute;mero de v&iacute;ctimas:</label>
@@ -39,7 +43,18 @@
 			  <option value = "2">Estados Unidos</option> 
 			</select>
 		 <label for="name">Estado:</label>
-	 		<input type="text" name="estado" value="" required>
+	 		<select name="estado" class="clear">
+			  <option > Baja California </option> 
+			  <option >Sonora</option> 
+			  <option >Chihuahua</option> 
+			  <option >Coahuila </option>
+			  <option >Nuevo Leon</option>
+			  <option >Tamaulipas</option>
+			  <option >California</option>
+			  <option>Arizona</option>
+			  <option>New Mexico</option>
+			  <option>Texas </option>
+			</select>
 	 	<label for="name">Municipio:</label>
 	 		<input type="text" name="municipio" value="" required>
 	 	<a href="http://www.latlong.net/" target="_blank">Buscar Longitud y Latitud</a>
