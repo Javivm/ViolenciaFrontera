@@ -3,14 +3,13 @@
 /* EN ESTE MODULO USARE LOS ECHO PARA HACER LA PAGINA DINAMICA, ESTO LO HAGO YA QUE LA BIBLIOTECA HTML/..../ITX NO ESTA SIENDO INSTALADA CORRECTAMENTE.
 	lO QUE SALE EN LOS ECHO VA A SER EL HTML, PARA ALTERAR EL DISEÑO ALTERARLO AQUI */
 include(ROOT_PATH . 'inc/header.php');
-include "./../credentials.php";
+include "./credentials.php";
 
 $link = mysql_pconnect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
 mysql_select_db($cfgServer['dbname']) or die("Could not select database"); //CONNECT TO DB
 
 //FORMA
-echo '<h1>Busca la noticia que desas modificar o borrar</h1>
-	<form name="Busca" method="get" action="">
+echo '<form name="Busca" method="get" action="">
 
 	<select name="Campo">
 		<option>Selecciona el campo por el que deseas buscar la noticia</option>
@@ -111,7 +110,7 @@ if(isset($_GET['Buscar'])){ //--EN CASO DE QUE YA HAYAN MANDADO INFO
 					$Categoria = $row['Categoria'];
 
 					echo'<tr>
-							<td><a href="./mcomptext.php?id='.$id.'">'.$id.'</a></td>
+							<td><a href="./comptext.php?id='.$id.'" target="_blank">'.$id.'</a></td>
 							<td>'.$Titulo.'</td>
 							<td>'.$Desc.'</td>
 							<td>'.$Fecha.'</td>

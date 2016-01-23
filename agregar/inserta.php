@@ -1,6 +1,6 @@
 <?php
 
-	include"./../config.php";
+	include"./../credentials.php";
 	//require_once"HTML/Template/ITX.php"; //NO PUEDO INCLUIR LA BIBLIOTECA
 
 	$link = mysql_pconnect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER

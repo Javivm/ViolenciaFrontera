@@ -1,11 +1,6 @@
 <?php
-<<<<<<< HEAD:modificar/index.html
-	$pagetitle = 'Modificar';
-	require_once("inc/config.php");
-=======
 	$pagetitle = 'Insertar';
 	require_once("../inc/config.php");
->>>>>>> 8555d185babeb77e3dda61eefb6429bdd6398f05:editar/index.php
 ?> 
 
 <?php include(ROOT_PATH . 'inc/header.php'); ?>
