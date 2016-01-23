@@ -111,7 +111,7 @@ if(isset($_GET['Buscar'])){ //--EN CASO DE QUE YA HAYAN MANDADO INFO
 					$Categoria = $row['Categoria'];
 
 					echo'<tr>
-							<td><a href="./mcomptext.php?id='.$id.'" target="_blank">'.$id.'</a></td>
+							<td><a href="./mcomptext.php?id='.$id.'">'.$id.'</a></td>
 							<td>'.$Titulo.'</td>
 							<td>'.$Desc.'</td>
 							<td>'.$Fecha.'</td>

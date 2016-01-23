@@ -27,19 +27,35 @@ $Pais = $row['Pais'];
 $Categoria = $row['Categoria'];
 $CompT = $row['Comp'];
 
-echo '<div><input type="text" value="'.$Titulo.'"><div>
-	  <div><input type="text" value="'.$NomPerp.'"><div>
-	  <div><input type="text" value="'.$Grupo.'"><div>
-	  <div><input type="text" value="'.$SubG.'"><div>
-	  <div><input type="text" value="'.$NumVictimas.'"><div>
-	  <div><input type="text" value="'.$Fecha.'"><div>
-	  <div><input type="text" value="'.$Pais.'"><div>
-	  <div><input type="text" value="'.$Estado.'"><div>
-	  <div><input type="text" value="'.$Municipio.'"><div>
-	  <div><input type="text" value="'.$Categoria.'"><div>
-	  <div><input type="textarea" value="'.$Desc.'"><div>
-	  <div><input type="textarea" value="'.$CompT.'"><div>
-	  ';
-
+if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA
+	//OBTENER LOS POST Y EJECUTAR EL QUERIE.
+	$id = $_POST['id'];
+	echo "Modificar".$id;
+	}else
+	if(isset($_POST['Borra'])){ //CHECAR SI PICO BORRAR NOTICIA
+		//OBTENER LOS POST Y EJECUTAR EL QUERIE.
+		$id = $_POST['id'];
+		echo"Borra".$id;
+	}else{
+			//EN CASO DE QUE NO HAYA PICADO NADA 
+			echo '<form action="" method="post">
+				  <input type="hidden" name="id" value="'.$id.'">
+				  <div><input type="text" value="'.$Titulo.'"></div>
+				  <div><input type="text" value="'.$NomPerp.'"></div>
+				  <div><input type="text" value="'.$Grupo.'"></div>
+				  <div><input type="text" value="'.$SubG.'"></div>
+				  <div><input type="text" value="'.$NumVictimas.'"></div>
+				  <div><input type="text" value="'.$Fecha.'"></div>
+				  <div><input type="text" value="'.$Pais.'"></div>
+				  <div><input type="text" value="'.$Estado.'"></div>
+				  <div><input type="text" value="'.$Municipio.'"></div>
+				  <div><input type="text" value="'.$Categoria.'"></div>
+				  <div><textarea>'.$Desc.'</textarea></div>
+				  <div><textarea>'.$CompT.'</textarea></div>
+				  <div><input type="submit" name="Mod" value="Modificar Noticia"></div>
+				  <div><input type="submit" name="Borra" value="Borrar Noticia"></div>
+				  <div><input type="button" name="Cancel" value="Cancelar" onClick="location.href='."'./modifica.php'".'"></div>
+				  </form>';    //                                                    - LOCATION.HREF="LINK" ES PARA QUE SIRVA COMO UN LINK EL BOTON
+		}//ELSE
 
 ?>
