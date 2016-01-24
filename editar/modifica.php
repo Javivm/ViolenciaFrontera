@@ -128,7 +128,8 @@ if(isset($_GET['Buscar'])){ //--EN CASO DE QUE YA HAYAN MANDADO INFO
 		</div>';
 	}//ELSE
 
-	mysql_free_result($res); //LEBRANDO MEMORIA	
+	mysql_free_result($res); //LIBERAR RESULTSET
+	mysql_close($link); //CERRAR CONECCION CON LA BASE DE DATOS	
 }//FIN IF
 //FIN DYNAMIC SHIT
 ?>

@@ -40,6 +40,7 @@ echo '<div>'.$Titulo.'</div>
 	  <div>'.$Desc.'</div>
 	  <div>'.$CompT.'</div>
 	  ';
-
+	mysql_free_result($res); //LIBERAR RESULTSET
+	mysql_close($link); //CERRAR CONECCION CON LA BASE DE DATOS
 
 ?>
