@@ -1,5 +1,5 @@
 <?php
-	$pagetitle = 'Insertar';
+	$pagetitle = 'Modificar';
 	require_once("../inc/config.php");
 ?> 
 
@@ -31,6 +31,7 @@
 					<input type="submit" name="Buscar" value="Buscar">
 				</div>
 			</form>
+
 		<?php include('modifica.php'); ?>
 	</div>
 </main>
