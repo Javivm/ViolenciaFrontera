@@ -2,36 +2,13 @@
 
 /* EN ESTE MODULO USARE LOS ECHO PARA HACER LA PAGINA DINAMICA, ESTO LO HAGO YA QUE LA BIBLIOTECA HTML/..../ITX NO ESTA SIENDO INSTALADA CORRECTAMENTE.
 	lO QUE SALE EN LOS ECHO VA A SER EL HTML, PARA ALTERAR EL DISEÑO ALTERARLO AQUI */
-include(ROOT_PATH . 'inc/header.php');
 include "./../credentials.php";
 
 $link = mysql_pconnect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
 mysql_select_db($cfgServer['dbname']) or die("Could not select database"); //CONNECT TO DB
 
 //FORMA
-echo '<h1>Busca la noticia que desas modificar o borrar</h1>
-	<form name="Busca" method="get" action="">
 
-	<select name="Campo">
-		<option>Selecciona el campo por el que deseas buscar la noticia</option>
-		<option>ID Noticia</option>
-		<option>Titulo</option>
-		<option>Grupo Perpetrador</option>
-		<option>Sub-Grupo Perpetrador</option>
-		<option>Nombre Perpetrador</option>
-		<option>Pais</option>
-		<option>Estado</option>
-		<option>Municipio</option>
-		<option>Tipo de Violencia</option>
-	</select><br><br>
-	<div>
-		Buscar:&nbsp; &nbsp;<input type="text" name="Buscador">
-	</div>
-	<br>
-	<div>
-		<input type="submit" name="Buscar" value="Buscar">
-	</div>
-</form>';
 //FIN FORMA
 
 //DYNAMIC SHIT

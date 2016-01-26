@@ -140,7 +140,7 @@ function initialize() {
       position: locacionEvento14,
       map: map,
       title:"Evento14",
-      icon: uspolice
+      icon: borderpatrol
   });
 
   var contentString = '<div id="content">'+
@@ -148,7 +148,7 @@ function initialize() {
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">Hola</h1>'+
       '<div id=bodyContent>'+
-      '<div><b>Grupo: US Police</b></div><div><b>Cartel de Sonora</b></div><div><b>Lugar: Mexico, Baja California, Tijuana</b></div><div><b>2015-12-08</b></div>'+
+      '<div><b>Grupo: Border Patrol</b></div><div><b>Cartel de Sonora</b></div><div><b>Lugar: Estados Unidos, Sonora, Tijuana</b></div><div><b>2015-12-09</b></div>'+
       '<p>Desaparecen Estudiantes<div><a href="./comptext.php?id=14">Noticia Completa</div>'+
       '</div>'+
       '</div>';
@@ -200,7 +200,7 @@ function initialize() {
       position: locacionEvento16,
       map: map,
       title:"Evento16",
-      icon: narc
+      icon: borderpatrol
   });
 
   var contentString = '<div id="content">'+
@@ -208,7 +208,7 @@ function initialize() {
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">Arrazando</h1>'+
       '<div id=bodyContent>'+
-      '<div><b>Grupo: Narco</b></div><div><b>Cartel Poop</b></div><div><b>Lugar: Mexico, Sonora, La Chingada</b></div><div><b>2015-12-10</b></div>'+
+      '<div><b>Grupo: Border Patrol</b></div><div><b>Cartel Poop</b></div><div><b>Lugar: Mexico, Sonora, La Chingada</b></div><div><b>2015-12-10</b></div>'+
       '<p>Mueren por causas de la naturaleza las personas<div><a href="./comptext.php?id=16">Noticia Completa</div>'+
       '</div>'+
       '</div>';
@@ -236,9 +236,9 @@ function initialize() {
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Dioctria</h1>'+
+      '<h1 id="firstHeading" class="firstHeading">Desparacion de grupo de 20 migrantes en Yuma</h1>'+
       '<div id=bodyContent>'+
-      '<div><b>Grupo: Otros</b></div><div><b>No Hay</b></div><div><b>Lugar: Mexico, Chihuahua, Insurgentes</b></div><div><b>2015-12-15</b></div>'+
+      '<div><b>Grupo: Otros</b></div><div><b>No Hay</b></div><div><b>Lugar: Estados Unidos, Arizona, Yuma</b></div><div><b>2015-12-15</b></div>'+
       '<p>Come Caca<div><a href="./comptext.php?id=17">Noticia Completa</div>'+
       '</div>'+
       '</div>';
@@ -250,36 +250,6 @@ function initialize() {
 
   locacionEvento17Marker.addListener('click', function() {
     infoEvento17.open(map, locacionEvento17Marker);
-  });
-
-
-  
-  var locacionEvento18 = new google.maps.LatLng(32.559546, -104.416809);
-
-  var locacionEvento18Marker = new google.maps.Marker({
-      position: locacionEvento18,
-      map: map,
-      title:"Evento18",
-      icon: other
-  });
-
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Prueba Color</h1>'+
-      '<div id=bodyContent>'+
-      '<div><b>Grupo: Policía MX</b></div><div><b></b></div><div><b>Lugar: Mexico, Baja California, Tijuana</b></div><div><b>2015-12-11</b></div>'+
-      '<p>alksssa<div><a href="./comptext.php?id=18">Noticia Completa</div>'+
-      '</div>'+
-      '</div>';
-
-  var infoEvento18 = new google.maps.InfoWindow({
-    content: contentString
-  });
-
-
-  locacionEvento18Marker.addListener('click', function() {
-    infoEvento18.open(map, locacionEvento18Marker);
   });
 
 
@@ -326,7 +296,7 @@ function initialize() {
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Come poop</h1>'+
+      '<h1 id="firstHeading" class="firstHeading">Q pedo Wey</h1>'+
       '<div id=bodyContent>'+
       '<div><b>Grupo: Narco</b></div><div><b>EL narquillo</b></div><div><b>Lugar: Estados Unidos, New Mexico, Willard</b></div><div><b>2016-02-04</b></div>'+
       '<p>Esto seria el resumen de la noticia<div><a href="./comptext.php?id=20">Noticia Completa</div>'+
@@ -344,36 +314,6 @@ function initialize() {
 
 
   
-  var locacionEvento21 = new google.maps.LatLng(28.770067, -105.946655);
-
-  var locacionEvento21Marker = new google.maps.Marker({
-      position: locacionEvento21,
-      map: map,
-      title:"Evento21",
-      icon: other
-  });
-
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Prueba link</h1>'+
-      '<div id=bodyContent>'+
-      '<div><b>Grupo: Otros</b></div><div><b>Balto</b></div><div><b>Lugar: Mexico, Chihuahua, La Calera</b></div><div><b>2016-02-06</b></div>'+
-      '<p>Resumen<div><a href="./comptext.php?id=21">Noticia Completa</div>'+
-      '</div>'+
-      '</div>';
-
-  var infoEvento21 = new google.maps.InfoWindow({
-    content: contentString
-  });
-
-
-  locacionEvento21Marker.addListener('click', function() {
-    infoEvento21.open(map, locacionEvento21Marker);
-  });
-
-
-  
   var locacionEvento22 = new google.maps.LatLng(32.221743, -110.926479);
 
   var locacionEvento22Marker = new google.maps.Marker({
@@ -386,7 +326,7 @@ function initialize() {
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Prueba de CompText</h1>'+
+      '<h1 id="firstHeading" class="firstHeading">Prueba 12</h1>'+
       '<div id=bodyContent>'+
       '<div><b>Grupo: US Police</b></div><div><b>Arizona Patrol</b></div><div><b>Lugar: Estados Unidos, Arizona, Tucson</b></div><div><b>2016-03-12</b></div>'+
       '<p>Resumen<div><a href="./comptext.php?id=22">Noticia Completa</div>'+
@@ -400,6 +340,36 @@ function initialize() {
 
   locacionEvento22Marker.addListener('click', function() {
     infoEvento22.open(map, locacionEvento22Marker);
+  });
+
+
+  
+  var locacionEvento23 = new google.maps.LatLng(27.242955, -100.125983);
+
+  var locacionEvento23Marker = new google.maps.Marker({
+      position: locacionEvento23,
+      map: map,
+      title:"Evento23",
+      icon: narc
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Santo</h1>'+
+      '<div id=bodyContent>'+
+      '<div><b>Grupo: Narco</b></div><div><b>Los Chilorios</b></div><div><b>Lugar: Mexico, Nuevo Leon, Anahuac</b></div><div><b>2016-01-21</b></div>'+
+      '<p>Terrible acontecimiento lamentable concecuencia de la mamada esta<div><a href="./comptext.php?id=23">Noticia Completa</div>'+
+      '</div>'+
+      '</div>';
+
+  var infoEvento23 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+  locacionEvento23Marker.addListener('click', function() {
+    infoEvento23.open(map, locacionEvento23Marker);
   });
 
 
