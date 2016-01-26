@@ -1,5 +1,5 @@
 <?php
-	$pagetitle = 'Insertar';
+	$pagetitle = 'Modificar';
 	require_once("../inc/config.php");
 ?> 
 
@@ -7,12 +7,31 @@
  
 <main class="formpage">
     <h1>Modificar:</h1>
-	<div id="BuscaMod1">
-		Buscador
-	</div>
+
 	<div>
-		<br>La noticia incluye los apartados de Titulo, Nombre del Perpetrador, Numero de Victimas, Fecha, Estado donde ocurrio, Municipio donde ocurrio, Pais donde ocurriuo, Descripcion, El texto de la noticia, longitud y latitud<br>
-		<br>Que campo desea modificar<br><br>
+		<h1>Busca la noticia que desas modificar o borrar</h1>
+			<form name="Busca" method="get" action="">
+				<select name="Campo">
+					<option>Selecciona el campo por el que deseas buscar la noticia</option>
+					<option>ID Noticia</option>
+					<option>Titulo</option>
+					<option>Grupo Perpetrador</option>
+					<option>Sub-Grupo Perpetrador</option>
+					<option>Nombre Perpetrador</option>
+					<option>Pais</option>
+					<option>Estado</option>
+					<option>Municipio</option>
+					<option>Tipo de Violencia</option>
+				</select><br><br>
+				<div>
+					Buscar:&nbsp; &nbsp;<input type="text" name="Buscador">
+				</div>
+				<br>
+				<div>
+					<input type="submit" name="Buscar" value="Buscar">
+				</div>
+			</form>
+
 		<?php include('modifica.php'); ?>
 	</div>
 </main>
