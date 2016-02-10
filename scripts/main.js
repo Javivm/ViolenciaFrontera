@@ -134,36 +134,6 @@ function initialize() {
 
   //---------PARTE GENERADA--------//
     
-  var locacionEvento14 = new google.maps.LatLng(32.514947, -117.038247);
-
-  var locacionEvento14Marker = new google.maps.Marker({
-      position: locacionEvento14,
-      map: map,
-      title:"Evento14",
-      icon: borderpatrol
-  });
-
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Hola</h1>'+
-      '<div id=bodyContent>'+
-      '<div><b>Grupo: Border Patrol</b></div><div><b>Cartel de Sonora</b></div><div><b>Lugar: Estados Unidos, Sonora, Tijuana</b></div><div><b>2015-12-09</b></div>'+
-      '<p>Desaparecen Estudiantes<div><a href="./comptext.php?id=14">Noticia Completa</div>'+
-      '</div>'+
-      '</div>';
-
-  var infoEvento14 = new google.maps.InfoWindow({
-    content: contentString
-  });
-
-
-  locacionEvento14Marker.addListener('click', function() {
-    infoEvento14.open(map, locacionEvento14Marker);
-  });
-
-
-  
   var locacionEvento15 = new google.maps.LatLng(31.761878, -106.485022);
 
   var locacionEvento15Marker = new google.maps.Marker({
@@ -190,36 +160,6 @@ function initialize() {
 
   locacionEvento15Marker.addListener('click', function() {
     infoEvento15.open(map, locacionEvento15Marker);
-  });
-
-
-  
-  var locacionEvento16 = new google.maps.LatLng(29.297225, -110.330881);
-
-  var locacionEvento16Marker = new google.maps.Marker({
-      position: locacionEvento16,
-      map: map,
-      title:"Evento16",
-      icon: narc
-  });
-
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Arrazando</h1>'+
-      '<div id=bodyContent>'+
-      '<div><b>Grupo: Narco</b></div><div><b>Zetas</b></div><div><b>Lugar: Mexico, Sonora, La Chingada</b></div><div><b>2015-12-10</b></div>'+
-      '<p>Mueren por causas de la naturaleza las personas<div><a href="./comptext.php?id=16">Noticia Completa</div>'+
-      '</div>'+
-      '</div>';
-
-  var infoEvento16 = new google.maps.InfoWindow({
-    content: contentString
-  });
-
-
-  locacionEvento16Marker.addListener('click', function() {
-    infoEvento16.open(map, locacionEvento16Marker);
   });
 
 

@@ -55,58 +55,12 @@ if(isset($_GET['Buscar'])){ //--EN CASO DE QUE YA HAYAN MANDADO INFO
 
 	if(mysql_num_rows($res) < 1){ //Checar que este regresando algun resultado
 		echo "<script>alert('No se han encontrado resultados')</script>";
-	}else{ //IF
-			echo'
-		<div>
-			<table style="width = 100%">
-				<tr>
-					<th>ID</th>
-					<th>Titulo</th>
-					<th>Resumen</th>
-					<th>Fecha</th>
-					<th>Estado</th>
-					<th>Municipio</th>
-					<th>Pais</th>
-				</tr>';
+	}
 
-//------------PARTE DINAMICA DE LA TABLA-----------------------//
-
-
-				while ($row = mysql_fetch_assoc($res)) {
-
-					$id = $row['idEvento'];
-					$Titulo = $row['Titulo'];
-					$NomPerp = $row['NombrePerpetrador'];
-					$NumVictimas = $row['NumVictimas'];
-					$Desc = $row['Descripcion'];
-					$Fecha = $row['Fecha'];
-					$Estado = $row['Estado'];
-					$SubG = $row['SubGrupo'];
-					$Grupo = $row['Grupo'];
-					$Municipio = $row['Municipio'];
-					$Pais = $row['Pais'];
-					$Categoria = $row['Categoria'];
-
-					echo'<tr>
-							<td><a href="./mcomptext.php?id='.$id.'">'.$id.'</a></td>
-							<td>'.$Titulo.'</td>
-							<td>'.$Desc.'</td>
-							<td>'.$Fecha.'</td>
-							<td>'.$Estado.'</td>
-							<td>'.$Municipio.'</td>
-							<td>'.$Pais.'</td>
-						</tr>';
-						
-				}//FIN WHILE
-
-//-------------FIN PARTE DINAMICA DE LA TABLA------------------//
-
-			echo '</table>
-		</div>';
-	}//ELSE
+	include "./mod2.php";
 
 	mysql_free_result($res); //LIBERAR RESULTSET
 	mysql_close($link); //CERRAR CONECCION CON LA BASE DE DATOS	
+
 }//FIN IF
 //FIN DYNAMIC SHIT
-?>

@@ -65,7 +65,14 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 
 	$NSubG = $_POST['SubG']; //OBTENER EL NOMBRE DEL SUBGRUPO QUE MANDO
 	$NGrupo = $_POST['Grupo']; //OBTENER EL NOMBRE DEL SUBGRUPO QUE MANDO
-	$q5 = "SELECT idGrupo FROM Grupo WHERE Nombre = '".$NSubG."';";
+
+	if($NSubG == ""){
+		$q5 = "SELECT idGrupo FROM Grupo WHERE Nombre = '' AND Grupo='".$NGrupo."';";
+	}else{ //EN CASO DE QUE HAYA EL SUBG NO ESTA VACIO
+		$q5 = "SELECT idGrupo FROM Grupo WHERE Nombre = '".$NSubG."';";		
+	}
+
+	
 	$res5 = mysql_query($q5); //GRUPO
 	if(mysql_num_rows($res5) > 0){//IF VALIDACION EXISTENCA
 		$rg = mysql_fetch_assoc($res5);
@@ -127,6 +134,10 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 	}
 //-------------------------------------------------------------FORMA------------------------------------------------//
 	else{
+
+		if(isset($_POST['Borra'])){ //CHECAR SI PICO BORRA
+			mysql_query("DELETE FROM Evento WHERE idEvento='".$idEvento."'");
+		}else{ 
 
 			//EN CASO DE QUE NO HAYA PICADO NADA 
 
@@ -299,7 +310,9 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 				  <div><input type="submit" name="Borra" value="Borrar Noticia"></div>
 				  <div><input type="button" name="Cancel" value="Cancelar" onClick="location.href='."'./modifica.php'".'"></div>
 				  </form>';    //                                                    - LOCATION.HREF="LINK" ES PARA QUE SIRVA COMO UN LINK EL BOTON
+
 		}//ELSE
+	}
 
 
 	//LIBERAR RESULTSETS
@@ -310,7 +323,6 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 	//FIN LIBERAR RESULTSETS
 
 	mysql_close($link); //CERRAR CONECCION CON LA BASE DE DATOS
-
 
 
 ?>
