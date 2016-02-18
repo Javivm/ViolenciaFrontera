@@ -166,6 +166,15 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 		// PARA ESTO SELECCIONAR LOS QUE NO HAYA MANDADO EL USUARIO CON != Y EN GURPO CON GROUP BY
 				//select * from Grupo where Grupo != 'Otros' GROUP BY Grupo ORDER BY idGrupo; CON ESTE QUERY SIEMPRE QUEDA OTROS HASTA ABAJO
 
+			
+
+
+
+
+
+
+
+/*
 			echo '<form action="" method="post">
 				  <input type="hidden" name="id" value="'.$id.'">
 				  <div><input type="text" name="Titulo" value="'.$Titulo.'"></div>
@@ -309,7 +318,9 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 				  <div><input type="submit" name="Mod" value="Modificar Noticia"></div>
 				  <div><input type="submit" name="Borra" value="Borrar Noticia"></div>
 				  <div><input type="button" name="Cancel" value="Cancelar" onClick="location.href='."'./modifica.php'".'"></div>
-				  </form>';    //                                                    - LOCATION.HREF="LINK" ES PARA QUE SIRVA COMO UN LINK EL BOTON
+				  </form>';    //                                                    - LOCATION.HREF="LINK" ES PARA QUE SIRVA COMO UN LINK EL BOTON*/
+
+				  include "./formaeditaritem.php";
 
 		}//ELSE
 	}

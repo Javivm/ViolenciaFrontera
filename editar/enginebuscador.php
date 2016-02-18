@@ -57,7 +57,7 @@ if(isset($_GET['Buscar'])){ //--EN CASO DE QUE YA HAYAN MANDADO INFO
 		echo "<script>alert('No se han encontrado resultados')</script>";
 	}
 
-	include "./mod2.php";
+	include "./tabladeresultados.php";
 
 	mysql_free_result($res); //LIBERAR RESULTSET
 	mysql_close($link); //CERRAR CONECCION CON LA BASE DE DATOS	

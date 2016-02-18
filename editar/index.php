@@ -6,7 +6,7 @@
 <?php include(ROOT_PATH . 'inc/header.php'); ?>
  
 <main class="formpage">
-    <h1>Modificar:</h1>
+
 
 	<div>
 		<h1>Busca la noticia que desas modificar o borrar</h1>
@@ -32,7 +32,7 @@
 				</div>
 			</form>
 
-		<?php include('modifica.php'); ?>
+		<?php include('enginebuscador.php'); ?>
 	</div>
 </main>
 
