@@ -105,7 +105,7 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 
 	$qmod = "UPDATE Evento SET Titulo='".$_POST['Titulo']."', NombrePerpetrador = '".$_POST['NomPerp']."', idGrupo = ".$idG.", idTiposViolencia = ".$idC.", idPais = ".$idP.", idEstado = ".$idE.", idMunicipio = ".$idM.", NumVictimas = ".$_POST['NumVictimas'].", Descripcion = '".$_POST['Desc']."', Fecha = '".$_POST['Fecha']."', TextoCompleto = '".$_POST['CompT']."', lg = ".$_POST['lg'].", lt = ".$_POST['lt']." WHERE idEvento = ".$id.";";
 
-	//echo $qmod;
+	//Secho $qmod;
 
 	mysql_query($qmod); //EJECUCION DEL QUERY, AQUI YA SE MODIFICA LA BASE DE DATOS.
 
@@ -122,7 +122,9 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 		mysql_free_result($res5);
 	//FIN LIBERAR RESULTADOS
 
-		include "./../crea.php";
+
+		include"./../crea.php";
+		echo "Modificado correctamente";
 
 	}else
 	if(isset($_POST['Borra'])){ //CHECAR SI PICO BORRAR NOTICIA
