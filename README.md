@@ -1,14 +1,8 @@
 # Violencia Frontera
 
-## Javier
+## Falta
 
-- Borrar carpetas extras
-- Instalar biblioteca de Templates
-- Ajax Buscador en modifica
-- Alterar archivo index.php  para que genere nueva idea (time bar and icons)
-
-
-## Rodrigo
-
-- Cierran nuevos ventanas viejas ventanas
-- Formato para formas
+- Limpiar el proyecto
+- Terminar tabladeresultados 
+- Cierran nuevos ventanas viejas ventanas, íconos y colores.
+- Formato para formas terminar
