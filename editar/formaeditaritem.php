@@ -12,9 +12,9 @@
 	<form action="" method="post">
 		  <input type="hidden" name="id" value="<?php echo $id; ?>">
 			  <div><input type="text" name="Titulo" value="<?php echo $Titulo; ?>"></div>
-			  <div><input type="text" name="NomPerp" value="<?php echo $Titulo; ?>"></div>
+			  <div><input type="text" name="NomPerp" value="<?php echo $NomPerp; ?>"></div>
 			  
-			  <div><input type="text" name="Grupo" value="<?php echo $Titulo; ?>">
+			  <div><input type="text" name="Grupo" value="<?php echo $Grupo; ?>">
 
 
 			  	<?php
@@ -47,10 +47,10 @@
 				  //------------FIN SELECT GRUPO--------------------//
 				?>
 				 </div>
-				  <div><input type="text" name="SubG" value="<?php echo $SubG ?>"></div>
-				  <div><input type="text" name="NumVictimas" value="'.$NumVictimas.'"></div>
-				  <div><input type="text" name="Fecha" value="'.$Fecha.'"></div>
-				  <div>';
+				  <div><input type="text" name="SubG" value="<?php echo $SubG; ?>"></div>
+				  <div><input type="text" name="NumVictimas" value="<?php echo $NumVictimas; ?>"></div>
+				  <div><input type="text" name="Fecha" value="<?php echo $Fecha; ?>"></div>
+				  <div>
 				  
 				  <?php
 
@@ -118,7 +118,7 @@
 				  ?>
 
 				  </div>
-				  <div><input type="text" name="Municipio" value="'.$Municipio.'"></div>
+				  <div><input type="text" name="Municipio" value="<?php echo $Municipio; ?>"></div>
 				  
 				  <?php
 
@@ -152,10 +152,10 @@
 
 				  ?>
 				  </div>
-				  <div><input type="text" name="lg" value="'.$lg.'"></div>
-				  <div><input type="text" name="lt" value="'.$lt.'"></div>
-				  <div><textarea name="Desc">'.$Desc.'</textarea></div>
-				  <div><textarea name="CompT">'.$CompT.'</textarea></div>
+				  <div><input type="text" name="lg" value="<?php echo $lg; ?>"></div>
+				  <div><input type="text" name="lt" value="<?php echo $lt; ?>"></div>
+				  <div><textarea name="Desc"><?php echo $Desc; ?></textarea></div>
+				  <div><textarea name="CompT"><?php echo $CompT ?></textarea></div>
 				  <div><input type="submit" name="Mod" value="Modificar Noticia"></div>
 				  <div><input type="submit" name="Borra" value="Borrar Noticia"></div>
 				  <div><input type="button" name="Cancel" value="Cancelar" onClick="location.href='./index.php'"></div>

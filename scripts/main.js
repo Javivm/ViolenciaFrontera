@@ -134,36 +134,6 @@ function initialize() {
 
   //---------PARTE GENERADA--------//
     
-  var locacionEvento15 = new google.maps.LatLng(31.761878, -106.485022);
-
-  var locacionEvento15Marker = new google.maps.Marker({
-      position: locacionEvento15,
-      map: map,
-      title:"Evento15",
-      icon: uspolice
-  });
-
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Police</h1>'+
-      '<div id=bodyContent>'+
-      '<div><b>Grupo: US Police</b></div><div><b>Texas Patrol</b></div><div><b>Lugar: Estados Unidos, Texas, El Paso</b></div><div><b>2015-06-09</b></div>'+
-      '<p>Matan a personas<div><a href="./comptext.php?id=15">Noticia Completa</div>'+
-      '</div>'+
-      '</div>';
-
-  var infoEvento15 = new google.maps.InfoWindow({
-    content: contentString
-  });
-
-
-  locacionEvento15Marker.addListener('click', function() {
-    infoEvento15.open(map, locacionEvento15Marker);
-  });
-
-
-  
   var locacionEvento17 = new google.maps.LatLng(28.632996, -106.069100);
 
   var locacionEvento17Marker = new google.maps.Marker({
@@ -236,7 +206,7 @@ function initialize() {
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Q pedo Wey</h1>'+
+      '<h1 id="firstHeading" class="firstHeading">Sirve</h1>'+
       '<div id=bodyContent>'+
       '<div><b>Grupo: Narco</b></div><div><b>EL narquillo</b></div><div><b>Lugar: Estados Unidos, New Mexico, Willard</b></div><div><b>2016-02-04</b></div>'+
       '<p>Esto seria el resumen de la noticia<div><a href="./comptext.php?id=20">Noticia Completa</div>'+
