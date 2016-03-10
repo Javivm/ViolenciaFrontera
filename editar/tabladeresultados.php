@@ -16,7 +16,7 @@
 		//------------PARTE DINAMICA DE LA TABLA-----------------------//
 
 
-						while ($row = mysql_fetch_assoc($res)) {
+						while ($row = mysql_fetch_array($res)) {
 
 							$id = $row['idEvento'];
 							$Titulo = $row['Titulo'];

@@ -4,7 +4,7 @@
 	lO QUE SALE EN LOS ECHO VA A SER EL HTML, PARA ALTERAR EL DISEÑO ALTERARLO AQUI */
 include "./../credentials.php";
 
-$link = mysql_pconnect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
+$link = mysql_connect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
 mysql_select_db($cfgServer['dbname']) or die("Could not select database"); //CONNECT TO DB
 
 //FORMA

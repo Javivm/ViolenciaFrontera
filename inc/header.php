@@ -48,8 +48,10 @@
     <!-- scripts -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-   	<script src="<?php echo BASE_URL;?>scripts/main.js"></script> 
+   	<script src="<?php echo BASE_URL;?>scripts/main.js"></script>
 
+	<script src="./scripts/main.js"></script>  <!-- SE LO AGREGUO JAVI -->
+  
   </head>
 
   <body>
