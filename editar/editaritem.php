@@ -7,7 +7,7 @@
 include "./../credentials.php";
 //include(ROOT_PATH . 'inc/header.php');
 
-$link = mysql_pconnect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
+$link = mysql_connect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
 mysql_select_db($cfgServer['dbname']) or die("Could not select database"); //CONNECT TO DB
 
 $id = $_GET['id']; //idEvento
@@ -17,19 +17,22 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 	$NPais = $_POST['Pais']; //OBTENER EL NOMBRE DEL PAIS QUE MANDO
 	$q1 = "SELECT idPais FROM Pais WHERE Nombre = '".$NPais."';";
 	$res1 = mysql_query($q1); //PAIS
-	$rp = mysql_fetch_assoc($res1);
+	mysql_error();
+	$rp = mysql_fetch_array($res1);
 	$idP = $rp['idPais'];
 
 	$NEstado = $_POST['Estado']; //OBTENER EL NOMBRE DEL ESTADO QUE MANDO
 	$q2 = "SELECT idEstado FROM Estado WHERE Nombre = '".$NEstado."';";
 	$res2 = mysql_query($q2); //ESTADO
-	$re = mysql_fetch_assoc($res2);
+	mysql_error();
+	$re = mysql_fetch_array($res2);
 	$idE = $re['idEstado']; //OBTENER idEstado DE LO QUE MANDO
 
 	$NCategoria = $_POST['Categoria']; //OBTENER EL NOMBRE DEL TIPO DE VIOLENCIA QUE MANDO
 	$q4 = "SELECT idTiposViolencia FROM TiposViolencia WHERE Categora = '".$NCategoria."';";
 	$res4 = mysql_query($q4); //TIPO VIOLENCIA
-	$rc = mysql_fetch_assoc($res4);
+	mysql_error();
+	$rc = mysql_fetch_array($res4);
 	$idC = $rc['idTiposViolencia']; //OBTENER idTiposViolencia DE LO QUE MANDO
 
 	//FIN VARIABLES LIMITADAS
@@ -41,8 +44,9 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 	$NMunicipio = $_POST['Municipio']; //OBTENER EL NOMBRE DEL MUNICIPIO QUE MANDO
 	$q3 = "SELECT idMunicipio FROM Municipio WHERE Nombre = '".$NMunicipio."';";
 	$res3 = mysql_query($q3); //MUNICIPIO
+	mysql_error();
 	if(mysql_num_rows($res3) > 0){//IF VALIDACION EXISTENCA
-		$rm = mysql_fetch_assoc($res3);
+		$rm = mysql_fetch_array($res3);
 		$idM = $rm['idMunicipio']; //OBTENER idMunicipio DE LO QUE MANDO
 	}//FIN IF VALIDACION DE EXISTENCIA
 	else
@@ -50,9 +54,11 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 		//SI NO EXISTE, HACER NUEVA INCERSION A LA BASE DE DATOS Y OBTENER SU idMunicipio
 		$qi = "INSERT INTO Municipio(Nombre) VALUES ('".$NMunicipio."');";
 		mysql_query($qi);
+		mysql_error();
 		$qi2 = "SELECT * FROM Municipio WHERE Nombre = '".$NMunicipio."';";
 		$resi = mysql_query($qi2);
-		$rowi = mysql_fetch_assoc($resi);
+		mysql_error();
+		$rowi = mysql_fetch_array($resi);
 		$idM = $rowi['idMunicipio'];
 		mysql_free_result($resi);
 		//echo $idM;
@@ -74,11 +80,13 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 
 	
 	$res5 = mysql_query($q5); //GRUPO
+	mysql_error();
 	if(mysql_num_rows($res5) > 0){//IF VALIDACION EXISTENCA
-		$rg = mysql_fetch_assoc($res5);
+		$rg = mysql_fetch_array($res5);
 		if(strcmp($NGrupo, $rg['Grupo']) != 0){ //IF PARA VER SI CAMBIO EL GRUPO
 			$qm = "UPDATE Grupo SET Grupo = '".$NGrupo."' WHERE Nombre = '".$NSubG."';";
 			mysql_query($qm);
+			mysql_error();
 		} //IF PARA VER SI CAMBIO EL GRUPO
 		$idG = $rg['idGrupo']; //OBTENER idGrupo DE LO QUE MANDO
 	}//FIN IF VALIDACION DE EXISTENCIA
@@ -87,9 +95,11 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 		//SI NO EXISTE, HACER NUEVA INCERSION A LA BASE DE DATOS Y OBTENER SU idGrupo
 		$qi = "INSERT INTO Grupo(Nombre, Grupo) VALUES ('".$NSubG."','".$NGrupo."');";
 		mysql_query($qi);
+		mysql_error();
 		$qi2 = "SELECT * FROM Grupo WHERE Nombre = '".$NSubG."';";
 		$resi = mysql_query($qi2);
-		$rowi = mysql_fetch_assoc($resi);
+		mysql_error();
+		$rowi = mysql_fetch_array($resi);
 		$idG = $rowi['idGrupo'];
 		mysql_free_result($resi);
 		//echo $idG;
@@ -133,20 +143,21 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 		mysql_query($qb);
 		include "./../crea.php";
 		
-	}
+	} //FIN CHECAR SI PICO MODIFICA
 //-------------------------------------------------------------FORMA------------------------------------------------//
 	else{
 
 		if(isset($_POST['Borra'])){ //CHECAR SI PICO BORRA
 			mysql_query("DELETE FROM Evento WHERE idEvento='".$idEvento."'");
+			mysql_error();
 		}else{ 
 
 			//EN CASO DE QUE NO HAYA PICADO NADA 
 
 		$q = "SELECT ev.idEvento, Titulo, ev.NombrePerpetrador, ev.NumVictimas, ev.Descripcion, ev.Fecha, ev.TextoCompleto AS Comp, ev.lg, ev.lt, e.Nombre AS Estado, g.Nombre AS SubGrupo, g.Descripcion AS DescGrupo, g.Grupo AS Grupo, m.Nombre AS Municipio, p.Nombre AS Pais, t.Categora AS Categoria FROM Evento ev LEFT JOIN Estado e ON ev.idEstado = e.idEstado LEFT JOIN Grupo g ON ev.idGrupo = g.idGrupo LEFT JOIN Municipio m ON ev.idMunicipio = m.idMunicipio LEFT JOIN Pais p ON ev.idPais = p.idPais LEFT JOIN TiposViolencia t ON ev.idTiposViolencia = t.idTiposViolencia WHERE idEvento = ".$id.";";
 		$res = mysql_query($q); //EJECUCION DEL QUERY
-
-		$row = mysql_fetch_assoc($res);
+		mysql_error();
+		$row = mysql_fetch_array($res);
 
 		$id = $row['idEvento'];
 		$Titulo = $row['Titulo'];
@@ -164,7 +175,24 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 		$lg = $row['lg'];
 		$lt = $row['lt'];
 
-		//PARA PAIS, ETSADO, CATEGORIA, GRUPO, HACER SELECT DINAMICAOS,
+		
+		include "./formaeditaritem.php";
+
+		}//ELSE
+	}
+
+
+	//LIBERAR RESULTSETS
+
+	mysql_free_result($res);
+
+
+	//FIN LIBERAR RESULTSETS
+
+	mysql_close($link); //CERRAR CONECCION CON LA BASE DE DATOS
+
+
+//PARA PAIS, ETSADO, CATEGORIA, GRUPO, HACER SELECT DINAMICAOS,
 		// PARA ESTO SELECCIONAR LOS QUE NO HAYA MANDADO EL USUARIO CON != Y EN GURPO CON GROUP BY
 				//select * from Grupo where Grupo != 'Otros' GROUP BY Grupo ORDER BY idGrupo; CON ESTE QUERY SIEMPRE QUEDA OTROS HASTA ABAJO
 
@@ -198,7 +226,7 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 				  			<option>'.$Grupo.'</option>'; //EGREGO AL SELECT EL GRUPO QUE ES
 				  		
 
-				  while($row = mysql_fetch_assoc($ress)){
+				  while($row = mysql_fetch_array($ress)){
 
 				  		$GrupoS = $row['Grupo'];
 
@@ -233,7 +261,7 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 				  			<option>'.$Pais.'</option>'; //EGREGO AL SELECT EL GRUPO QUE ES
 				  		
 
-				  while($row = mysql_fetch_assoc($ress)){
+				  while($row = mysql_fetch_array($ress)){
 
 				  		$PaisS = $row['Nombre'];
 
@@ -266,7 +294,7 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 				  			<option>'.$Estado.'</option>'; //EGREGO AL SELECT EL GRUPO QUE ES
 				  		
 
-				  while($row = mysql_fetch_assoc($ress)){
+				  while($row = mysql_fetch_array($ress)){
 
 				  		$EstadoS = $row['Nombre'];
 
@@ -299,7 +327,7 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 				  			<option>'.$Categoria.'</option>'; //EGREGO AL SELECT EL GRUPO QUE ES
 				  		
 
-				  while($row = mysql_fetch_assoc($ress)){
+				  while($row = mysql_fetch_array($ress)){
 
 				  		$CategoriaS = $row['Categora'];
 
@@ -321,21 +349,6 @@ if(isset($_POST['Mod'])){ //CHECAR SI PICO MODIFICAR NOTICIA11	//VARIABLES LIMIT
 				  <div><input type="submit" name="Borra" value="Borrar Noticia"></div>
 				  <div><input type="button" name="Cancel" value="Cancelar" onClick="location.href='."'./modifica.php'".'"></div>
 				  </form>';    //                                                    - LOCATION.HREF="LINK" ES PARA QUE SIRVA COMO UN LINK EL BOTON*/
-
-				  include "./formaeditaritem.php";
-
-		}//ELSE
-	}
-
-
-	//LIBERAR RESULTSETS
-
-		mysql_free_result($res);
-
-
-	//FIN LIBERAR RESULTSETS
-
-	mysql_close($link); //CERRAR CONECCION CON LA BASE DE DATOS
 
 
 ?>

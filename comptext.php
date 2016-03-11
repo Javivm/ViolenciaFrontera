@@ -1,8 +1,16 @@
+
+<?php
+	$pagetitle = 'Modificar';
+	require_once("inc/config.php");
+?> 
+
+<?php include(ROOT_PATH . 'inc/header.php'); ?>
+
 <?php
 
 include "./credentials.php";
 
-$link = mysql_pconnect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
+$link = mysql_connect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
 mysql_select_db($cfgServer['dbname']) or die("Could not select database"); //CONNECT TO DB
 
 $id = $_GET['id'];
@@ -11,7 +19,7 @@ $q = "SELECT ev.idEvento, Titulo, ev.NombrePerpetrador, ev.NumVictimas, ev.Descr
 
 $res = mysql_query($q); //EJECUCION DEL QUERY
 
-$row = mysql_fetch_assoc($res);
+$row = mysql_fetch_array($res);
 
 $id = $row['idEvento'];
 $Titulo = $row['Titulo'];
@@ -27,20 +35,26 @@ $Pais = $row['Pais'];
 $Categoria = $row['Categoria'];
 $CompT = $row['Comp'];
 
-echo '<div>'.$Titulo.'</div>
-	  <div>'.$NomPerp.'</div>
-	  <div>'.$Grupo.'</div>
-	  <div>'.$SubG.'</div>
-	  <div>'.$NumVictimas.'</div>
-	  <div>'.$Fecha.'</div>
-	  <div>'.$Pais.'</div>
-	  <div>'.$Estado.'</div>
-	  <div>'.$Municipio.'</div>
-	  <div>'.$Categoria.'</div>
-	  <div>'.$Desc.'</div>
-	  <div>'.$CompT.'</div>
-	  ';
+?>
+
+<div><?php echo $Titulo; ?></div>
+<div><?php echo $NomPerp; ?></div>
+<div><?php echo $Grupo; ?></div>
+<div><?php echo $SubG; ?></div>
+<div><?php echo $NumVictimas; ?></div>
+<div><?php echo $Fecha; ?></div>
+<div><?php echo $Pais;?></div>
+<div><?php echo $Estado;?></div>
+<div><?php echo $Municipio; ?></div>
+<div><?php echo $Categoria; ?></div>
+<div><?php echo $Desc; ?></div>
+<div><?php echo $CompT; ?></div>
+
+<?php
+
 	mysql_free_result($res); //LIBERAR RESULTSET
 	mysql_close($link); //CERRAR CONECCION CON LA BASE DE DATOS
 
 ?>
+
+<?php include(ROOT_PATH . 'inc/footer.php'); ?>

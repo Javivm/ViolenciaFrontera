@@ -3,9 +3,13 @@
 	include"./../credentials.php";
 	//require_once"HTML/Template/ITX.php"; //NO PUEDO INCLUIR LA BIBLIOTECA
 
-	$link = mysql_pconnect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
-	mysql_select_db($cfgServer['dbname']) or die("Could not select database"); //CONNECT TO DB
+	//$link = mysql_pconnect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
+	//mysql_select_db($cfgServer['dbname']) or die("Could not select database"); //CONNECT TO DB
 	
+//echo $cfgServer['dbname'];
+  $link = mysql_connect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database".mysql_error()); //CONNECT TO SERVER
+  mysql_select_db($cfgServer['dbname']) or die("Could not select database"); //CONNECT TO DB
+
 	//------OBTENER VARIABLES-----//
 	$Titulo = $_POST['titulo'];
 	$Grupo = $_POST['grupo'];
@@ -36,12 +40,12 @@
 		$QuerieS = "INSERT INTO Estado(Nombre) VALUES ('$Estado');";
 		mysql_query($QuerieS);
 		$res = mysql_query($Querie2);
-		$line = mysql_fetch_assoc($res); //OBTENGO LA LINEA DEL RESULTADO
+		$line = mysql_fetch_array($res); //OBTENGO LA LINEA DEL RESULTADO
 		$idEstado = $line['idEstado']; //OBTENER EL DATO DE LA DB
 	}
 	else{
 		echo "<script>alert('El estado ya existe');</script>"; //NO SE POR QUE NO DESPLIEGA LOS POP UP
-		$line = mysql_fetch_assoc($res); //OBTENGO LA LINEA DEL RESULTADO
+		$line = mysql_fetch_array($res); //OBTENGO LA LINEA DEL RESULTADO
 		$idEstado = $line['idEstado']; //OBTENER EL DATO DE LA DB
 		//echo $idEstado;
 	}
@@ -55,12 +59,12 @@
 		$QuerieS = "INSERT INTO Municipio(Nombre) VALUES ('$Municipio');";
 		mysql_query($QuerieS);
 		$res = mysql_query($Querie3);
-		$line = mysql_fetch_assoc($res); //OBTENGO LA LINEA DEL RESULTADO
+		$line = mysql_fetch_array($res); //OBTENGO LA LINEA DEL RESULTADO
 		$idMunicipio = $line['idMunicipio']; //OBTENER EL DATO DE LA DB
 	}
 	else{
 		echo "<script>alert('El municipio ya existe');</script>"; //NO SE POR QUE NO DESPLIEGA LOS POP UP
-		$line = mysql_fetch_assoc($res); //OBTENGO LA LINEA DEL RESULTADO
+		$line = mysql_fetch_array($res); //OBTENGO LA LINEA DEL RESULTADO
 		$idMunicipio = $line['idMunicipio']; //OBTENER EL DATO DE LA DB
 		//echo $idMunicipio;
 	}
@@ -74,12 +78,12 @@
 		$QuerieS = "INSERT INTO TiposViolencia(Categora) VALUES ('$Categoria');";
 		mysql_query($QuerieS);
 		$res = mysql_query($Querie5);
-		$line = mysql_fetch_assoc($res);
+		$line = mysql_fetch_array($res);
 		$idTipoViolencia = $line['idTiposViolencia']; 
 	}
 	else{
 		echo "<script>alert('El tipo de violencia ya existe');</script>"; //NO SE POR QUE NO DESPLIEGA LOS POP UP
-		$line = mysql_fetch_assoc($res);
+		$line = mysql_fetch_array($res);
 		$idTipoViolencia = $line['idTiposViolencia']; //OBTENER EL DATO DE LA DB
 		//echo $idTipoViolencia;
 	}
@@ -93,12 +97,12 @@
 		$QuerieS = "INSERT INTO Grupo(Nombre, Grupo) VALUES ('$SubGrupo', '$Grupo');";
 		mysql_query($QuerieS);
 		$res = mysql_query($Querie4);
-		$line = mysql_fetch_assoc($res); //OBTENGO LA LINEA DEL RESULTADO
+		$line = mysql_fetch_array($res); //OBTENGO LA LINEA DEL RESULTADO
 		$idGrupo = $line['idGrupo']; //OBTENER EL DATO DE LA DB
 	}
 	else{
 		echo "<script>alert('El grupo ya existe');</script>"; //NO SE POR QUE NO DESPLIEGA LOS POP UP
-		$line = mysql_fetch_assoc($res); //OBTENGO LA LINEA DEL RESULTADO
+		$line = mysql_fetch_array($res); //OBTENGO LA LINEA DEL RESULTADO
 		$idGrupo = $line['idGrupo']; //OBTENER EL DATO DE LA DB
 		//echo $idGrupo;
 	}
@@ -114,6 +118,9 @@
 	mysql_query($QuerieF);
 
 	if(!mysql_error($link)){
+		echo 'arriba';
+		include './../crea.php';
+		echo 'abajo';	
 		echo "Se ha insertado correctamente a la base de datos.";
 		echo '<a href="http://159.203.136.89/">Regresar a la pagina principal</a>';
 	}else{
@@ -123,6 +130,4 @@
 
 	mysql_free_result($res); //LIBERAR RESULTSET
 	mysql_close($link); //CERRAR CONECCION CON LA BASE DE DATOS
-
-	include"./../crea.php";
 ?>

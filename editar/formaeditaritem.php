@@ -1,4 +1,4 @@
-	<?php
+<?php
 	$pagetitle = 'Modificar';
 	require_once("../inc/config.php");
 ?> 
@@ -32,7 +32,7 @@
 				  			<option>'.$Grupo.'</option>'; //EGREGO AL SELECT EL GRUPO QUE ES
 				  		
 
-				  while($row = mysql_fetch_assoc($ress)){
+				  while($row = mysql_fetch_array($ress)){
 
 				  		$GrupoS = $row['Grupo'];
 
@@ -68,7 +68,7 @@
 				  			<option>'.$Pais.'</option>'; //EGREGO AL SELECT EL GRUPO QUE ES
 				  		
 
-				  while($row = mysql_fetch_assoc($ress)){
+				  while($row = mysql_fetch_array($ress)){
 
 				  		$PaisS = $row['Nombre'];
 
@@ -101,7 +101,7 @@
 				  			<option>'.$Estado.'</option>'; //EGREGO AL SELECT EL GRUPO QUE ES
 				  		
 
-				  while($row = mysql_fetch_assoc($ress)){
+				  while($row = mysql_fetch_array($ress)){
 
 				  		$EstadoS = $row['Nombre'];
 
@@ -136,7 +136,7 @@
 				  			<option>'.$Categoria.'</option>'; //EGREGO AL SELECT EL GRUPO QUE ES
 				  		
 
-				  while($row = mysql_fetch_assoc($ress)){
+				  while($row = mysql_fetch_array($ress)){
 
 				  		$CategoriaS = $row['Categora'];
 
