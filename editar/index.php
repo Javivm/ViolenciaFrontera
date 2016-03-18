@@ -24,7 +24,7 @@
 					<option>Tipo de Violencia</option>
 				</select><br><br>
 				<div>
-					Buscar:&nbsp; &nbsp;<input type="text" name="Buscador">
+					Buscar:<input type="text" name="Buscador">
 				</div>
 				<br>
 				<div>
