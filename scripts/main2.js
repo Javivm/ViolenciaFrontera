@@ -132,6 +132,36 @@ function initialize() {
 
   //---------PARTE GENERADA--------//
     
+    var locacionEvento4 = new google.maps.LatLng(31.761878, -106.485022);
+
+    var locacionEvento4Marker = new google.maps.Marker({
+        position: locacionEvento4,
+        map: map,
+        title:"Evento4",
+        icon: mxpolice
+    });
+
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Se hechan unos tacos</h1>'+
+        '<div id=bodyContent>'+
+        '<div><b>Grupo: Policía MX</b></div><div><b>Policia Judicial</b></div><div><b>Lugar: Estados Unidos, Texas, El Paso</b></div><div><b>2015-12-08</b></div>'+
+        '<p>Desidieron hacer posole tradicional<div><a href="./comptext.php?id=4">Noticia Completa</div>'+
+        '</div>'+
+        '</div>';
+
+    var infoEvento4 = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+    locacionEvento4Marker.addListener('click', function() {
+      infoEvento4.open(map, locacionEvento4Marker);
+    });
+
+
+    
     var locacionEvento5 = new google.maps.LatLng(31.690364, -106.424548);
 
     var locacionEvento5Marker = new google.maps.Marker({
@@ -146,7 +176,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Se les caen los pollos</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: Otros</b></div><div><b>Los Polleros de Molcahete</b></div><div><b>Lugar: M�xico, Chiuahua, Ciudad Juarez</b></div><div><b>2015-12-21</b></div>'+
+        '<div><b>Grupo: Otros</b></div><div><b>Los Polleros de Molcahete</b></div><div><b>Lugar: México, Chiuahua, Ciudad Juarez</b></div><div><b>2015-12-21</b></div>'+
         '<p>Se cayeron los polleros con sus pollos<div><a href="./comptext.php?id=5">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -192,8 +222,36 @@ function initialize() {
 
 
     
-<<<<<<< HEAD
-=======
+    var locacionEvento9 = new google.maps.LatLng(31.305542, -110.933762);
+
+    var locacionEvento9Marker = new google.maps.Marker({
+        position: locacionEvento9,
+        map: map,
+        title:"Evento9",
+        icon: mxpolice
+    });
+
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Prueba Color</h1>'+
+        '<div id=bodyContent>'+
+        '<div><b>Grupo: Policía MX</b></div><div><b>Policia Judicial</b></div><div><b>Lugar: Estados Unidos, Sonora, Heroica Nogales</b></div><div><b>2015-12-11</b></div>'+
+        '<p>si sirve it is going to ba mazing<div><a href="./comptext.php?id=9">Noticia Completa</div>'+
+        '</div>'+
+        '</div>';
+
+    var infoEvento9 = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+    locacionEvento9Marker.addListener('click', function() {
+      infoEvento9.open(map, locacionEvento9Marker);
+    });
+
+
+    
     var locacionEvento10 = new google.maps.LatLng(32.233713, -110.931702);
 
     var locacionEvento10Marker = new google.maps.Marker({
@@ -224,7 +282,6 @@ function initialize() {
 
 
     
->>>>>>> 6b28287b86b6861f39911645bdaab9c477112ab5
     var locacionEvento11 = new google.maps.LatLng(31.858897, -112.840576);
 
     var locacionEvento11Marker = new google.maps.Marker({
@@ -299,7 +356,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Los Hochos</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: Border Patrol</b></div><div><b>Winnies</b></div><div><b>Lugar: M�xico, Baja California, Tecate</b></div><div><b>2015-12-15</b></div>'+
+        '<div><b>Grupo: Border Patrol</b></div><div><b>Winnies</b></div><div><b>Lugar: México, Baja California, Tecate</b></div><div><b>2015-12-15</b></div>'+
         '<p>Oscar Mayer hiso salchichas a 23 personas<div><a href="./comptext.php?id=13">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -311,6 +368,36 @@ function initialize() {
 
     locacionEvento13Marker.addListener('click', function() {
       infoEvento13.open(map, locacionEvento13Marker);
+    });
+
+
+    
+    var locacionEvento16 = new google.maps.LatLng(35.085334, -106.605553);
+
+    var locacionEvento16Marker = new google.maps.Marker({
+        position: locacionEvento16,
+        map: map,
+        title:"Evento16",
+        icon: borderpatrol
+    });
+
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Prueba15</h1>'+
+        '<div id=bodyContent>'+
+        '<div><b>Grupo: Policï¿½a MX</b></div><div><b></b></div><div><b>Lugar: Estados Unidos, New Mexico, Albuquerque</b></div><div><b>2016-01-21</b></div>'+
+        '<p>Probano ya lo de credentials<div><a href="./comptext.php?id=16">Noticia Completa</div>'+
+        '</div>'+
+        '</div>';
+
+    var infoEvento16 = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+    locacionEvento16Marker.addListener('click', function() {
+      infoEvento16.open(map, locacionEvento16Marker);
     });
 
 
@@ -345,6 +432,66 @@ function initialize() {
 
 
     
+    var locacionEvento19 = new google.maps.LatLng(29.297225, -110.330881);
+
+    var locacionEvento19Marker = new google.maps.Marker({
+        position: locacionEvento19,
+        map: map,
+        title:"Evento19",
+        icon: borderpatrol
+    });
+
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Se tropezo</h1>'+
+        '<div id=bodyContent>'+
+        '<div><b>Grupo: Policï¿½a MX</b></div><div><b></b></div><div><b>Lugar: México, Sonora, El Chile</b></div><div><b>0000-00-00</b></div>'+
+        '<p>saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<div><a href="./comptext.php?id=19">Noticia Completa</div>'+
+        '</div>'+
+        '</div>';
+
+    var infoEvento19 = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+    locacionEvento19Marker.addListener('click', function() {
+      infoEvento19.open(map, locacionEvento19Marker);
+    });
+
+
+    
+    var locacionEvento20 = new google.maps.LatLng(29.297225, -110.330881);
+
+    var locacionEvento20Marker = new google.maps.Marker({
+        position: locacionEvento20,
+        map: map,
+        title:"Evento20",
+        icon: borderpatrol
+    });
+
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Se tropezo</h1>'+
+        '<div id=bodyContent>'+
+        '<div><b>Grupo: Policï¿½a MX</b></div><div><b></b></div><div><b>Lugar: México, Sonora, El Chile</b></div><div><b>0000-00-00</b></div>'+
+        '<p>saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<div><a href="./comptext.php?id=20">Noticia Completa</div>'+
+        '</div>'+
+        '</div>';
+
+    var infoEvento20 = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+    locacionEvento20Marker.addListener('click', function() {
+      infoEvento20.open(map, locacionEvento20Marker);
+    });
+
+
+    
     var locacionEvento21 = new google.maps.LatLng(33.448377, -112.074037);
 
     var locacionEvento21Marker = new google.maps.Marker({
@@ -357,7 +504,7 @@ function initialize() {
     var contentString = '<div id="content">'+
         '<div id="siteNotice">'+
         '</div>'+
-        '<h1 id="firstHeading" class="firstHeading">Jorge</h1>'+
+        '<h1 id="firstHeading" class="firstHeading">Javier</h1>'+
         '<div id=bodyContent>'+
         '<div><b>Grupo: US Police</b></div><div><b>Pheonix</b></div><div><b>Lugar: Estados Unidos, Arizona, Pheonix</b></div><div><b>0000-00-00</b></div>'+
         '<p>Resumen de l anoticia<div><a href="./comptext.php?id=21">Noticia Completa</div>'+
@@ -371,6 +518,126 @@ function initialize() {
 
     locacionEvento21Marker.addListener('click', function() {
       infoEvento21.open(map, locacionEvento21Marker);
+    });
+
+
+    
+    var locacionEvento22 = new google.maps.LatLng(19.246470, -99.101350);
+
+    var locacionEvento22Marker = new google.maps.Marker({
+        position: locacionEvento22,
+        map: map,
+        title:"Evento22",
+        icon: uspolice
+    });
+
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Prueba</h1>'+
+        '<div id=bodyContent>'+
+        '<div><b>Grupo: PolicÃ­a MX</b></div><div><b>subg</b></div><div><b>Lugar: México, Baja California, Distrito Federal</b></div><div><b>2012-02-02</b></div>'+
+        '<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<div><a href="./comptext.php?id=22">Noticia Completa</div>'+
+        '</div>'+
+        '</div>';
+
+    var infoEvento22 = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+    locacionEvento22Marker.addListener('click', function() {
+      infoEvento22.open(map, locacionEvento22Marker);
+    });
+
+
+    
+    var locacionEvento23 = new google.maps.LatLng(19.246470, -99.101350);
+
+    var locacionEvento23Marker = new google.maps.Marker({
+        position: locacionEvento23,
+        map: map,
+        title:"Evento23",
+        icon: uspolice
+    });
+
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Prueba</h1>'+
+        '<div id=bodyContent>'+
+        '<div><b>Grupo: PolicÃ­a MX</b></div><div><b>subg</b></div><div><b>Lugar: México, Baja California, Distrito Federal</b></div><div><b>2012-02-02</b></div>'+
+        '<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<div><a href="./comptext.php?id=23">Noticia Completa</div>'+
+        '</div>'+
+        '</div>';
+
+    var infoEvento23 = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+    locacionEvento23Marker.addListener('click', function() {
+      infoEvento23.open(map, locacionEvento23Marker);
+    });
+
+
+    
+    var locacionEvento24 = new google.maps.LatLng(19.246470, -99.101350);
+
+    var locacionEvento24Marker = new google.maps.Marker({
+        position: locacionEvento24,
+        map: map,
+        title:"Evento24",
+        icon: uspolice
+    });
+
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Prueba</h1>'+
+        '<div id=bodyContent>'+
+        '<div><b>Grupo: PolicÃ­a MX</b></div><div><b>subg</b></div><div><b>Lugar: México, Baja California, Distrito Federal</b></div><div><b>2012-02-02</b></div>'+
+        '<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<div><a href="./comptext.php?id=24">Noticia Completa</div>'+
+        '</div>'+
+        '</div>';
+
+    var infoEvento24 = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+    locacionEvento24Marker.addListener('click', function() {
+      infoEvento24.open(map, locacionEvento24Marker);
+    });
+
+
+    
+    var locacionEvento25 = new google.maps.LatLng(19.246470, -99.101350);
+
+    var locacionEvento25Marker = new google.maps.Marker({
+        position: locacionEvento25,
+        map: map,
+        title:"Evento25",
+        icon: uspolice
+    });
+
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Prueba</h1>'+
+        '<div id=bodyContent>'+
+        '<div><b>Grupo: PolicÃ­a MX</b></div><div><b>subg</b></div><div><b>Lugar: México, Baja California, Distrito Federal</b></div><div><b>2012-02-02</b></div>'+
+        '<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<div><a href="./comptext.php?id=25">Noticia Completa</div>'+
+        '</div>'+
+        '</div>';
+
+    var infoEvento25 = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+    locacionEvento25Marker.addListener('click', function() {
+      infoEvento25.open(map, locacionEvento25Marker);
     });
 
 
@@ -389,7 +656,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Lanix</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>a</b></div><div><b>Lugar: M�xico, Baja California, 213</b></div><div><b>0000-00-00</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>a</b></div><div><b>Lugar: México, Baja California, 213</b></div><div><b>0000-00-00</b></div>'+
         '<p>dascsdac<div><a href="./comptext.php?id=26">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -419,7 +686,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=27">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -449,7 +716,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=28">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -479,7 +746,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=30">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -509,7 +776,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=31">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -539,7 +806,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=32">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -569,7 +836,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=33">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -599,7 +866,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=34">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -629,7 +896,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=35">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -659,7 +926,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=36">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -689,7 +956,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=37">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -719,7 +986,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=38">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -749,7 +1016,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=39">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -779,7 +1046,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=40">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -809,7 +1076,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=41">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -839,7 +1106,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Hola mUndo 32</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: M�xico, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>ckla</b></div><div><b>Lugar: México, Baja California, lkcsna</b></div><div><b>2016-01-22</b></div>'+
         '<p>sadc asd <div><a href="./comptext.php?id=42">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -869,7 +1136,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Prueba<Crea</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>asdf</b></div><div><b>Lugar: M�xico, Baja California, fas</b></div><div><b>2001-01-01</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>asdf</b></div><div><b>Lugar: México, Baja California, fas</b></div><div><b>2001-01-01</b></div>'+
         '<p>afasdf<div><a href="./comptext.php?id=43">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -899,7 +1166,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Prueba<Crea</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: US Police</b></div><div><b>asdf</b></div><div><b>Lugar: M�xico, Baja California, fas</b></div><div><b>2001-01-01</b></div>'+
+        '<div><b>Grupo: US Police</b></div><div><b>asdf</b></div><div><b>Lugar: México, Baja California, fas</b></div><div><b>2001-01-01</b></div>'+
         '<p>afasdf<div><a href="./comptext.php?id=44">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -959,8 +1226,8 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Holi</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: Narco</b></div><div><b>Antrax</b></div><div><b>Lugar: M�xico, Baja California, Tijuana</b></div><div><b>2016-03-09</b></div>'+
-        '<p>Pequeño abstract de la noticia<div><a href="./comptext.php?id=46">Noticia Completa</div>'+
+        '<div><b>Grupo: Narco</b></div><div><b>Antrax</b></div><div><b>Lugar: México, Baja California, Tijuana</b></div><div><b>2016-03-09</b></div>'+
+        '<p>PequeÃ±o abstract de la noticia<div><a href="./comptext.php?id=46">Noticia Completa</div>'+
         '</div>'+
         '</div>';
 
@@ -971,6 +1238,36 @@ function initialize() {
 
     locacionEvento46Marker.addListener('click', function() {
       infoEvento46.open(map, locacionEvento46Marker);
+    });
+
+
+    
+    var locacionEvento47 = new google.maps.LatLng(19.432608, -99.133208);
+
+    var locacionEvento47Marker = new google.maps.Marker({
+        position: locacionEvento47,
+        map: map,
+        title:"Evento47",
+        icon: narc
+    });
+
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Prueba1345</h1>'+
+        '<div id=bodyContent>'+
+        '<div><b>Grupo: Policï¿½a MX</b></div><div><b></b></div><div><b>Lugar: México, Baja California, 1</b></div><div><b>2016-11-10</b></div>'+
+        '<p>aslkasdmlcknads<div><a href="./comptext.php?id=47">Noticia Completa</div>'+
+        '</div>'+
+        '</div>';
+
+    var infoEvento47 = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+    locacionEvento47Marker.addListener('click', function() {
+      infoEvento47.open(map, locacionEvento47Marker);
     });
 
 
@@ -989,7 +1286,7 @@ function initialize() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Jorge Paredes</h1>'+
         '<div id=bodyContent>'+
-        '<div><b>Grupo: Narco</b></div><div><b>Los Jorgys</b></div><div><b>Lugar: M�xico, Chihuahua, kjsadb</b></div><div><b>2016-03-14</b></div>'+
+        '<div><b>Grupo: Narco</b></div><div><b>Los Jorgys</b></div><div><b>Lugar: México, Chihuahua, kjsadb</b></div><div><b>2016-03-14</b></div>'+
         '<p>khdfbsvdskdflfskljbfjn<div><a href="./comptext.php?id=48">Noticia Completa</div>'+
         '</div>'+
         '</div>';
@@ -1005,159 +1302,6 @@ function initialize() {
 
 
     
-<<<<<<< HEAD
-    var locacionEvento55 = new google.maps.LatLng(29.072967, -110.955919);
-
-    var locacionEvento55Marker = new google.maps.Marker({
-        position: locacionEvento55,
-        map: map,
-        title:"Evento55",
-        icon: mxpolice
-    });
-
-    var contentString = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '</div>'+
-        '<h1 id="firstHeading" class="firstHeading">Prueba </h1>'+
-        '<div id=bodyContent>'+
-        '<div><b>Grupo: Policía MX</b></div><div><b></b></div><div><b>Lugar: M�xico, Sonora, Hermosillo</b></div><div><b>2016-03-22</b></div>'+
-        '<p>alsdnc<div><a href="./comptext.php?id=55">Noticia Completa</div>'+
-        '</div>'+
-        '</div>';
-
-    var infoEvento55 = new google.maps.InfoWindow({
-      content: contentString
-    });
-
-
-    locacionEvento55Marker.addListener('click', function() {
-      infoEvento55.open(map, locacionEvento55Marker);
-    });
-
-
-    
-    var locacionEvento56 = new google.maps.LatLng(32.568584, -116.634697);
-
-    var locacionEvento56Marker = new google.maps.Marker({
-        position: locacionEvento56,
-        map: map,
-        title:"Evento56",
-        icon: mxpolice
-    });
-
-    var contentString = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '</div>'+
-        '<h1 id="firstHeading" class="firstHeading">El Yesco al atque</h1>'+
-        '<div id=bodyContent>'+
-        '<div><b>Grupo: Policía MX</b></div><div><b></b></div><div><b>Lugar: Estados Unidos, Baja California, Tijuana</b></div><div><b>0000-00-00</b></div>'+
-        '<p>El yesco ataca de nuevo<div><a href="./comptext.php?id=56">Noticia Completa</div>'+
-        '</div>'+
-        '</div>';
-
-    var infoEvento56 = new google.maps.InfoWindow({
-      content: contentString
-    });
-
-
-    locacionEvento56Marker.addListener('click', function() {
-      infoEvento56.open(map, locacionEvento56Marker);
-    });
-
-
-    
-    var locacionEvento57 = new google.maps.LatLng(32.568584, -116.634697);
-
-    var locacionEvento57Marker = new google.maps.Marker({
-        position: locacionEvento57,
-        map: map,
-        title:"Evento57",
-        icon: mxpolice
-    });
-
-    var contentString = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '</div>'+
-        '<h1 id="firstHeading" class="firstHeading">Yesco</h1>'+
-        '<div id=bodyContent>'+
-        '<div><b>Grupo: Policía MX</b></div><div><b></b></div><div><b>Lugar: M�xico, Baja California, Tecate</b></div><div><b>0000-00-00</b></div>'+
-        '<p>El yesco mata banda<div><a href="./comptext.php?id=57">Noticia Completa</div>'+
-        '</div>'+
-        '</div>';
-
-    var infoEvento57 = new google.maps.InfoWindow({
-      content: contentString
-    });
-
-
-    locacionEvento57Marker.addListener('click', function() {
-      infoEvento57.open(map, locacionEvento57Marker);
-    });
-
-
-    
-    var locacionEvento58 = new google.maps.LatLng(32.568584, -116.634697);
-
-    var locacionEvento58Marker = new google.maps.Marker({
-        position: locacionEvento58,
-        map: map,
-        title:"Evento58",
-        icon: mxpolice
-    });
-
-    var contentString = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '</div>'+
-        '<h1 id="firstHeading" class="firstHeading">Yesco</h1>'+
-        '<div id=bodyContent>'+
-        '<div><b>Grupo: Policía MX</b></div><div><b></b></div><div><b>Lugar: M�xico, Baja California, Tecate</b></div><div><b>0000-00-00</b></div>'+
-        '<p>El yesco mata banda<div><a href="./comptext.php?id=58">Noticia Completa</div>'+
-        '</div>'+
-        '</div>';
-
-    var infoEvento58 = new google.maps.InfoWindow({
-      content: contentString
-    });
-
-
-    locacionEvento58Marker.addListener('click', function() {
-      infoEvento58.open(map, locacionEvento58Marker);
-    });
-
-
-    
-    var locacionEvento59 = new google.maps.LatLng(32.568584, -116.634697);
-
-    var locacionEvento59Marker = new google.maps.Marker({
-        position: locacionEvento59,
-        map: map,
-        title:"Evento59",
-        icon: mxpolice
-    });
-
-    var contentString = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '</div>'+
-        '<h1 id="firstHeading" class="firstHeading">Yesco</h1>'+
-        '<div id=bodyContent>'+
-        '<div><b>Grupo: Policía MX</b></div><div><b></b></div><div><b>Lugar: M�xico, California, Tecate</b></div><div><b>0000-00-00</b></div>'+
-        '<p>El yesco mata banda<div><a href="./comptext.php?id=59">Noticia Completa</div>'+
-        '</div>'+
-        '</div>';
-
-    var infoEvento59 = new google.maps.InfoWindow({
-      content: contentString
-    });
-
-
-    locacionEvento59Marker.addListener('click', function() {
-      infoEvento59.open(map, locacionEvento59Marker);
-    });
-
-
-    
-=======
->>>>>>> 6b28287b86b6861f39911645bdaab9c477112ab5
 
     //---------FIN PARTE GENERADA--------//
       

@@ -2,12 +2,12 @@
 	<table style="width = 100%">
 		<tr>
 			<th>ID</th>
-			<th>Titulo</th>
+			<th>Título</th>
 			<th>Resumen</th>
 			<th>Fecha</th>
 			<th>Estado</th>
 			<th>Municipio</th>
-			<th>Pais</th>
+			<th>País</th>
 		</tr>
 
 		<?php

@@ -6,7 +6,11 @@
 
   $link = mysql_connect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
   mysql_select_db($cfgServer['dbname']) or die("Could not select database"); //CONNECT TO DB
+<<<<<<< HEAD
   $file = fopen("../scripts/main.js", "w") or die("ERROR: CREATING FILE"); // NO ESTA CREANDO EL ARCHIVO POR ESO LO VOY A PROBAR EN UN ECHO
+=======
+  $file = fopen(ROOT_PATH . "scripts/main.js", "w") or die("ERROR: CREATING FILE"); // NO ESTA CREANDO EL ARCHIVO POR ESO LO VOY A PROBAR EN UN ECHO
+>>>>>>> 6b28287b86b6861f39911645bdaab9c477112ab5
 
   //PARTE 1 CONSTANTE
   fwrite($file, '//Maps entro
