@@ -1,0 +1,19 @@
+Validaciones de agregar noticia
+feha en 3 campos
+todo required excepto Sub-Grupo y Nombre del responsable
+
+incluir el UTF-8 en php
+
+Checar el fopen del script
+
+quitar los pop ups
+
+antes editar la base un ok que pueda checar la info
+
+separar codigos
+
+test driven development (check out)
+
+checar api the js para mysql
+
+

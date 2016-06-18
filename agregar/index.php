@@ -16,7 +16,7 @@
 			  <option >US Police</option> 
 			  <option >Border Patrol</option> 
 			  <option >Narco</option> 
-			  <option >Polic&iacute;a MX</option>
+			  <option >Policía MX</option>
 			  <option >Otros</option>
 			</select>
 		<label for="name">Sub-Grupo: (en caso de existir)</label>
@@ -32,12 +32,12 @@
 			  <option >Concecuencias de Migracion</option> 
 			</select>
 	 	<label for="name">Fecha de la Noticia:</label>
-	 		<input type="text" name="fecha" value="(a&ntilde;o-mes-d&iacute;a)" required class="clear">
-	 	<label for="name">N&uacute;mero de v&iacute;ctimas:</label>
+	 		<input type="text" name="fecha" value="(año-mes-día)" required class="clear">
+	 	<label for="name">Número de víctimas:</label>
 	 		<input type="text" name="numvictimas" value="" required>
 </div>
 <div class="division">
-	 	<label for="name">Pa&iacute;s:</label>
+	 	<label for="name">País:</label>
 	 		<select name="pais">
 			  <option value = "1">México</option> 
 			  <option value = "2">Estados Unidos</option> 
@@ -68,7 +68,7 @@
 	 		<textarea name="desc" value="" required></textarea>
 	 	<label for="message">Texto completo de la noticia: (Se muestra en la página de la noticia)</label>
 	 		<textarea name="texto" value="" required></textarea>
-	 	<input type="submit" class="buttonsubmit" value="A&ntilde;adir evento">
+	 	<input type="submit" class="buttonsubmit" value="Añadir evento">
 </div>	
 	 
 	 </form>

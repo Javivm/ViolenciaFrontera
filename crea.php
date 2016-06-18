@@ -6,7 +6,7 @@
 
   $link = mysql_connect($cfgServer['host'], $cfgServer['user'], $cfgServer['password']) or die("Could not connect to MySQL database"); //CONNECT TO SERVER
   mysql_select_db($cfgServer['dbname']) or die("Could not select database"); //CONNECT TO DB
-  $file = fopen("./../scripts/main.js", "w") or die("ERROR: CREATING FILE"); // NO ESTA CREANDO EL ARCHIVO POR ESO LO VOY A PROBAR EN UN ECHO
+  $file = fopen("../scripts/main.js", "w") or die("ERROR: CREATING FILE"); // NO ESTA CREANDO EL ARCHIVO POR ESO LO VOY A PROBAR EN UN ECHO
 
   //PARTE 1 CONSTANTE
   fwrite($file, '//Maps entro
@@ -157,7 +157,7 @@ function initialize() {
 
 
       //---COMPARACION DE GRUPO PARA OBTENER EL COLOR DESEADO----//
-      if(strcmp($line['GrupoC'], "Policía MX") == 10752){
+      if(strcmp($line['GrupoC'], "Policía MX") == 0){
           $color = "mxpolice";
         }
 
@@ -178,6 +178,8 @@ function initialize() {
       }
     
       //---FIN COMPARACION DE GRUPO PARA OBTENER EL COLOR DESEADO----//
+
+      echo $line['GrupoC'];
 
       fwrite($file, "
     var locacionEvento".$line['idEvento']." = new google.maps.LatLng(".$line['lng'].", ".$line['lat'].");
